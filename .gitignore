@@ -1,0 +1,12 @@
+# Heavy or private media stays out of git
+AUDIO/
+ASSETS/REFERENCES/*.mp4
+FINAL OUTPUT/
+
+# Project build and tool outputs
+REMOTION-3D/node_modules/
+REMOTION-3D/out/
+REMOTION-3D/tools/venv/
+REMOTION-3D/tools/whisper-*/
+REMOTION-3D/public/audio/
+.DS_Store

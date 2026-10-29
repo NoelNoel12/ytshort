@@ -1,0 +1,42 @@
+{
+  "name": "noel-menjawab-3d",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Noel Menjawab Shorts, 3D stylized pipeline (Remotion + Three.js)",
+  "type": "module",
+  "scripts": {
+    "dev": "remotion studio",
+    "data": "tsx scripts/data.ts short-02",
+    "verify": "tsx scripts/checkFinance.ts short-02 && tsx scripts/verifySync.ts short-02",
+    "verify:sync": "tsx scripts/verifySync.ts short-02",
+    "check:finance": "tsx scripts/checkFinance.ts short-02",
+    "check:flicker": "tsx scripts/checkFlicker.ts short-02 --mode static && tsx scripts/checkFlicker.ts short-02 --mode moving",
+    "still:check": "tsx scripts/stills.ts Short02 all-scenes --sheet",
+    "render:preview": "remotion render Short02 out/preview-short-02.mp4 --scale=0.5 --concurrency=3 --jpeg-quality=80 --crf=26",
+    "render:one": "tsx scripts/renderAll.ts short-02",
+    "render:all": "tsx scripts/renderAll.ts --all",
+    "typecheck": "tsc --noEmit -p ."
+  },
+  "dependencies": {
+    "@fontsource/baloo-2": "5.3.0",
+    "@fontsource/plus-jakarta-sans": "5.3.0",
+    "@react-three/drei": "10.7.9",
+    "@react-three/fiber": "9.8.2",
+    "@remotion/cli": "4.0.539",
+    "@remotion/media": "4.0.539",
+    "@remotion/three": "4.0.539",
+    "react": "19.2.0",
+    "react-dom": "19.2.0",
+    "remotion": "4.0.539",
+    "three": "0.186.1"
+  },
+  "devDependencies": {
+    "@remotion/bundler": "^4.0.539",
+    "@remotion/renderer": "4.0.539",
+    "@types/node": "^22.20.5",
+    "@types/react": "19.2.2",
+    "@types/three": "0.186.0",
+    "tsx": "4.20.6",
+    "typescript": "5.9.3"
+  }
+}

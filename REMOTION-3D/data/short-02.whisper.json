@@ -1,0 +1,1280 @@
+{
+ "model": "/home/user/noelnoel12/ytshort/REMOTION-3D/tools/whisper-small-ct2",
+ "language": "id",
+ "duration": 88.68575,
+ "elapsedSec": 27.0,
+ "segments": [
+  {
+   "start": 0.0,
+   "end": 7.9,
+   "text": "Kalau kamu bikin aturan bunga paling gampang, hitung dari pinjaman awal, kamu sudah punya bunga flat, tapi kelihatannya murah."
+  },
+  {
+   "start": 8.24,
+   "end": 10.38,
+   "text": "Padahal aslinya lebih mahal."
+  },
+  {
+   "start": 10.96,
+   "end": 14.26,
+   "text": "Jadi Pak Dodi minjem 12 juta buat beli mesin mollen."
+  },
+  {
+   "start": 14.74,
+   "end": 18.4,
+   "text": "Bunganya 1% per bulan, flat selama setahun."
+  },
+  {
+   "start": 18.82,
+   "end": 21.14,
+   "text": "Kelihatannya cuma 12% per tahun."
+  },
+  {
+   "start": 21.66,
+   "end": 26.72,
+   "text": "Jadi tiap bulan dia bayar 1 juta pokok plus 120 ribu bunga."
+  },
+  {
+   "start": 26.72,
+   "end": 29.68,
+   "text": "Cicilannya sama terus, gampang diingat."
+  },
+  {
+   "start": 30.02,
+   "end": 32.86,
+   "text": "Tapi utangnya terus turun karena dicicil."
+  },
+  {
+   "start": 33.28,
+   "end": 36.04,
+   "text": "Di bulan ke enam, sisa utangnya tinggal separuh."
+  },
+  {
+   "start": 36.3,
+   "end": 39.04,
+   "text": "Sementara bunganya tetap 120 ribu."
+  },
+  {
+   "start": 39.34,
+   "end": 43.08,
+   "text": "Jadi Pak Dodi bayar bunga buat uang yang sudah dia balikin."
+  },
+  {
+   "start": 43.46,
+   "end": 48.04,
+   "text": "Kalau dihitung dari sisa utang, bunganya sekitar 21% per tahun."
+  },
+  {
+   "start": 48.48,
+   "end": 50.14,
+   "text": "Namanya bunga efektif."
+  },
+  {
+   "start": 50.5,
+   "end": 56.06,
+   "text": "Itu angka yang sebenarnya kamu bayar dan hampir 2x lipat dari 12% tadi."
+  },
+  {
+   "start": 56.06,
+   "end": 60.02,
+   "text": "Tapi jujur aja, bunga flat nggak selalu jelek."
+  },
+  {
+   "start": 60.36,
+   "end": 62.68,
+   "text": "Cicilannya tetap, jadi gampang diatur."
+  },
+  {
+   "start": 63.18,
+   "end": 66.54,
+   "text": "Masalahnya kalau dibandingin langsung sama bunga efektif."
+  },
+  {
+   "start": 66.9,
+   "end": 70.58,
+   "text": "Jadi sebelum minjem, tanya bunga efektifnya per tahun berapa."
+  },
+  {
+   "start": 71.0,
+   "end": 73.08,
+   "text": "Cek juga biaya admin dan asuransinya."
+  },
+  {
+   "start": 73.5,
+   "end": 75.68,
+   "text": "Karena itu biaya tambahan di luar bunga."
+  },
+  {
+   "start": 76.24,
+   "end": 77.82,
+   "text": "Nah itu jawabannya."
+  },
+  {
+   "start": 78.36,
+   "end": 81.66,
+   "text": "Bunga flat kelihatan murah karena dihitung dari utang awal."
+  },
+  {
+   "start": 81.98,
+   "end": 83.04,
+   "text": "Bukan sisa utang."
+  },
+  {
+   "start": 83.38,
+   "end": 85.58,
+   "text": "Pertanyaan berikutnya kamu yang pilih."
+  },
+  {
+   "start": 85.58,
+   "end": 86.68,
+   "text": "Tulis di komentar."
+  },
+  {
+   "start": 86.98,
+   "end": 88.48,
+   "text": "Nanti Noel menjawab."
+  }
+ ],
+ "words": [
+  {
+   "text": "Kalau",
+   "start": 0.0,
+   "end": 0.22,
+   "prob": 0.406
+  },
+  {
+   "text": "kamu",
+   "start": 0.22,
+   "end": 0.48,
+   "prob": 0.975
+  },
+  {
+   "text": "bikin",
+   "start": 0.48,
+   "end": 0.78,
+   "prob": 0.99
+  },
+  {
+   "text": "aturan",
+   "start": 0.78,
+   "end": 1.08,
+   "prob": 0.992
+  },
+  {
+   "text": "bunga",
+   "start": 1.08,
+   "end": 1.54,
+   "prob": 0.995
+  },
+  {
+   "text": "paling",
+   "start": 1.54,
+   "end": 1.78,
+   "prob": 0.996
+  },
+  {
+   "text": "gampang,",
+   "start": 1.78,
+   "end": 2.48,
+   "prob": 0.993
+  },
+  {
+   "text": "hitung",
+   "start": 2.8,
+   "end": 3.26,
+   "prob": 0.945
+  },
+  {
+   "text": "dari",
+   "start": 3.26,
+   "end": 3.46,
+   "prob": 0.993
+  },
+  {
+   "text": "pinjaman",
+   "start": 3.46,
+   "end": 3.82,
+   "prob": 0.969
+  },
+  {
+   "text": "awal,",
+   "start": 3.82,
+   "end": 4.4,
+   "prob": 0.998
+  },
+  {
+   "text": "kamu",
+   "start": 4.66,
+   "end": 4.86,
+   "prob": 0.98
+  },
+  {
+   "text": "sudah",
+   "start": 4.86,
+   "end": 5.1,
+   "prob": 0.985
+  },
+  {
+   "text": "punya",
+   "start": 5.1,
+   "end": 5.36,
+   "prob": 0.998
+  },
+  {
+   "text": "bunga",
+   "start": 5.36,
+   "end": 5.62,
+   "prob": 0.999
+  },
+  {
+   "text": "flat,",
+   "start": 5.62,
+   "end": 5.88,
+   "prob": 0.935
+  },
+  {
+   "text": "tapi",
+   "start": 6.4,
+   "end": 6.78,
+   "prob": 0.978
+  },
+  {
+   "text": "kelihatannya",
+   "start": 6.78,
+   "end": 7.38,
+   "prob": 0.949
+  },
+  {
+   "text": "murah.",
+   "start": 7.38,
+   "end": 7.9,
+   "prob": 0.997
+  },
+  {
+   "text": "Padahal",
+   "start": 8.24,
+   "end": 8.96,
+   "prob": 0.907
+  },
+  {
+   "text": "aslinya",
+   "start": 8.96,
+   "end": 9.64,
+   "prob": 0.917
+  },
+  {
+   "text": "lebih",
+   "start": 9.64,
+   "end": 9.82,
+   "prob": 0.995
+  },
+  {
+   "text": "mahal.",
+   "start": 9.82,
+   "end": 10.38,
+   "prob": 0.979
+  },
+  {
+   "text": "Jadi",
+   "start": 10.96,
+   "end": 11.34,
+   "prob": 0.978
+  },
+  {
+   "text": "Pak",
+   "start": 11.34,
+   "end": 11.62,
+   "prob": 0.42
+  },
+  {
+   "text": "Dodi",
+   "start": 11.62,
+   "end": 11.88,
+   "prob": 0.829
+  },
+  {
+   "text": "minjem",
+   "start": 11.88,
+   "end": 12.24,
+   "prob": 0.837
+  },
+  {
+   "text": "12",
+   "start": 12.24,
+   "end": 12.62,
+   "prob": 0.954
+  },
+  {
+   "text": "juta",
+   "start": 12.62,
+   "end": 13.08,
+   "prob": 0.941
+  },
+  {
+   "text": "buat",
+   "start": 13.08,
+   "end": 13.4,
+   "prob": 0.928
+  },
+  {
+   "text": "beli",
+   "start": 13.4,
+   "end": 13.72,
+   "prob": 0.995
+  },
+  {
+   "text": "mesin",
+   "start": 13.72,
+   "end": 13.96,
+   "prob": 0.992
+  },
+  {
+   "text": "mollen.",
+   "start": 13.96,
+   "end": 14.26,
+   "prob": 0.497
+  },
+  {
+   "text": "Bunganya",
+   "start": 14.74,
+   "end": 15.2,
+   "prob": 0.93
+  },
+  {
+   "text": "1",
+   "start": 15.2,
+   "end": 15.56,
+   "prob": 0.97
+  },
+  {
+   "text": "%",
+   "start": 15.56,
+   "end": 15.9,
+   "prob": 0.601
+  },
+  {
+   "text": "per",
+   "start": 15.9,
+   "end": 16.12,
+   "prob": 0.986
+  },
+  {
+   "text": "bulan,",
+   "start": 16.12,
+   "end": 16.52,
+   "prob": 0.995
+  },
+  {
+   "text": "flat",
+   "start": 16.86,
+   "end": 17.26,
+   "prob": 0.991
+  },
+  {
+   "text": "selama",
+   "start": 17.26,
+   "end": 17.86,
+   "prob": 0.918
+  },
+  {
+   "text": "setahun.",
+   "start": 17.86,
+   "end": 18.4,
+   "prob": 0.889
+  },
+  {
+   "text": "Kelihatannya",
+   "start": 18.82,
+   "end": 19.44,
+   "prob": 0.898
+  },
+  {
+   "text": "cuma",
+   "start": 19.44,
+   "end": 19.78,
+   "prob": 0.949
+  },
+  {
+   "text": "12",
+   "start": 19.78,
+   "end": 20.28,
+   "prob": 0.999
+  },
+  {
+   "text": "%",
+   "start": 20.28,
+   "end": 20.6,
+   "prob": 0.938
+  },
+  {
+   "text": "per",
+   "start": 20.6,
+   "end": 20.82,
+   "prob": 0.89
+  },
+  {
+   "text": "tahun.",
+   "start": 20.82,
+   "end": 21.14,
+   "prob": 0.988
+  },
+  {
+   "text": "Jadi",
+   "start": 21.66,
+   "end": 22.08,
+   "prob": 0.994
+  },
+  {
+   "text": "tiap",
+   "start": 22.08,
+   "end": 22.56,
+   "prob": 0.865
+  },
+  {
+   "text": "bulan",
+   "start": 22.56,
+   "end": 22.98,
+   "prob": 0.999
+  },
+  {
+   "text": "dia",
+   "start": 22.98,
+   "end": 23.2,
+   "prob": 0.784
+  },
+  {
+   "text": "bayar",
+   "start": 23.2,
+   "end": 23.58,
+   "prob": 0.995
+  },
+  {
+   "text": "1",
+   "start": 23.58,
+   "end": 23.92,
+   "prob": 0.948
+  },
+  {
+   "text": "juta",
+   "start": 23.92,
+   "end": 24.18,
+   "prob": 0.988
+  },
+  {
+   "text": "pokok",
+   "start": 24.18,
+   "end": 24.64,
+   "prob": 0.973
+  },
+  {
+   "text": "plus",
+   "start": 24.64,
+   "end": 25.14,
+   "prob": 0.598
+  },
+  {
+   "text": "120",
+   "start": 25.14,
+   "end": 25.78,
+   "prob": 0.985
+  },
+  {
+   "text": "ribu",
+   "start": 25.78,
+   "end": 26.3,
+   "prob": 0.943
+  },
+  {
+   "text": "bunga.",
+   "start": 26.3,
+   "end": 26.72,
+   "prob": 0.998
+  },
+  {
+   "text": "Cicilannya",
+   "start": 26.72,
+   "end": 27.64,
+   "prob": 0.828
+  },
+  {
+   "text": "sama",
+   "start": 27.64,
+   "end": 27.96,
+   "prob": 0.998
+  },
+  {
+   "text": "terus,",
+   "start": 27.96,
+   "end": 28.3,
+   "prob": 0.986
+  },
+  {
+   "text": "gampang",
+   "start": 28.8,
+   "end": 29.18,
+   "prob": 0.979
+  },
+  {
+   "text": "diingat.",
+   "start": 29.18,
+   "end": 29.68,
+   "prob": 0.958
+  },
+  {
+   "text": "Tapi",
+   "start": 30.02,
+   "end": 30.46,
+   "prob": 0.971
+  },
+  {
+   "text": "utangnya",
+   "start": 30.46,
+   "end": 31.14,
+   "prob": 0.883
+  },
+  {
+   "text": "terus",
+   "start": 31.14,
+   "end": 31.4,
+   "prob": 0.983
+  },
+  {
+   "text": "turun",
+   "start": 31.4,
+   "end": 31.92,
+   "prob": 0.993
+  },
+  {
+   "text": "karena",
+   "start": 31.92,
+   "end": 32.2,
+   "prob": 0.984
+  },
+  {
+   "text": "dicicil.",
+   "start": 32.2,
+   "end": 32.86,
+   "prob": 0.947
+  },
+  {
+   "text": "Di",
+   "start": 33.28,
+   "end": 33.4,
+   "prob": 0.946
+  },
+  {
+   "text": "bulan",
+   "start": 33.4,
+   "end": 33.64,
+   "prob": 0.969
+  },
+  {
+   "text": "ke",
+   "start": 33.64,
+   "end": 33.76,
+   "prob": 0.956
+  },
+  {
+   "text": "enam,",
+   "start": 33.76,
+   "end": 34.08,
+   "prob": 0.737
+  },
+  {
+   "text": "sisa",
+   "start": 34.44,
+   "end": 34.6,
+   "prob": 0.874
+  },
+  {
+   "text": "utangnya",
+   "start": 34.6,
+   "end": 35.08,
+   "prob": 0.992
+  },
+  {
+   "text": "tinggal",
+   "start": 35.08,
+   "end": 35.52,
+   "prob": 0.994
+  },
+  {
+   "text": "separuh.",
+   "start": 35.52,
+   "end": 36.04,
+   "prob": 0.875
+  },
+  {
+   "text": "Sementara",
+   "start": 36.3,
+   "end": 36.78,
+   "prob": 0.953
+  },
+  {
+   "text": "bunganya",
+   "start": 36.78,
+   "end": 37.28,
+   "prob": 0.93
+  },
+  {
+   "text": "tetap",
+   "start": 37.28,
+   "end": 37.92,
+   "prob": 0.923
+  },
+  {
+   "text": "120",
+   "start": 37.92,
+   "end": 38.42,
+   "prob": 0.932
+  },
+  {
+   "text": "ribu.",
+   "start": 38.42,
+   "end": 39.04,
+   "prob": 0.949
+  },
+  {
+   "text": "Jadi",
+   "start": 39.34,
+   "end": 39.76,
+   "prob": 0.966
+  },
+  {
+   "text": "Pak",
+   "start": 39.76,
+   "end": 40.12,
+   "prob": 0.532
+  },
+  {
+   "text": "Dodi",
+   "start": 40.12,
+   "end": 40.36,
+   "prob": 0.737
+  },
+  {
+   "text": "bayar",
+   "start": 40.36,
+   "end": 40.66,
+   "prob": 0.99
+  },
+  {
+   "text": "bunga",
+   "start": 40.66,
+   "end": 41.08,
+   "prob": 0.999
+  },
+  {
+   "text": "buat",
+   "start": 41.08,
+   "end": 41.4,
+   "prob": 0.959
+  },
+  {
+   "text": "uang",
+   "start": 41.4,
+   "end": 41.76,
+   "prob": 0.997
+  },
+  {
+   "text": "yang",
+   "start": 41.76,
+   "end": 41.94,
+   "prob": 0.996
+  },
+  {
+   "text": "sudah",
+   "start": 41.94,
+   "end": 42.3,
+   "prob": 0.959
+  },
+  {
+   "text": "dia",
+   "start": 42.3,
+   "end": 42.54,
+   "prob": 0.968
+  },
+  {
+   "text": "balikin.",
+   "start": 42.54,
+   "end": 43.08,
+   "prob": 0.971
+  },
+  {
+   "text": "Kalau",
+   "start": 43.46,
+   "end": 43.76,
+   "prob": 0.898
+  },
+  {
+   "text": "dihitung",
+   "start": 43.76,
+   "end": 44.1,
+   "prob": 0.9
+  },
+  {
+   "text": "dari",
+   "start": 44.1,
+   "end": 44.34,
+   "prob": 0.997
+  },
+  {
+   "text": "sisa",
+   "start": 44.34,
+   "end": 44.6,
+   "prob": 0.995
+  },
+  {
+   "text": "utang,",
+   "start": 44.6,
+   "end": 45.06,
+   "prob": 0.994
+  },
+  {
+   "text": "bunganya",
+   "start": 45.42,
+   "end": 45.8,
+   "prob": 0.963
+  },
+  {
+   "text": "sekitar",
+   "start": 45.8,
+   "end": 46.26,
+   "prob": 0.996
+  },
+  {
+   "text": "21",
+   "start": 46.26,
+   "end": 46.94,
+   "prob": 0.992
+  },
+  {
+   "text": "%",
+   "start": 46.94,
+   "end": 47.52,
+   "prob": 0.402
+  },
+  {
+   "text": "per",
+   "start": 47.52,
+   "end": 47.74,
+   "prob": 0.743
+  },
+  {
+   "text": "tahun.",
+   "start": 47.74,
+   "end": 48.04,
+   "prob": 0.993
+  },
+  {
+   "text": "Namanya",
+   "start": 48.48,
+   "end": 49.02,
+   "prob": 0.984
+  },
+  {
+   "text": "bunga",
+   "start": 49.02,
+   "end": 49.56,
+   "prob": 0.956
+  },
+  {
+   "text": "efektif.",
+   "start": 49.56,
+   "end": 50.14,
+   "prob": 0.979
+  },
+  {
+   "text": "Itu",
+   "start": 50.5,
+   "end": 50.82,
+   "prob": 0.975
+  },
+  {
+   "text": "angka",
+   "start": 50.82,
+   "end": 51.16,
+   "prob": 0.981
+  },
+  {
+   "text": "yang",
+   "start": 51.16,
+   "end": 51.3,
+   "prob": 0.992
+  },
+  {
+   "text": "sebenarnya",
+   "start": 51.3,
+   "end": 51.84,
+   "prob": 0.987
+  },
+  {
+   "text": "kamu",
+   "start": 51.84,
+   "end": 52.12,
+   "prob": 0.992
+  },
+  {
+   "text": "bayar",
+   "start": 52.12,
+   "end": 52.62,
+   "prob": 0.999
+  },
+  {
+   "text": "dan",
+   "start": 52.62,
+   "end": 53.02,
+   "prob": 0.438
+  },
+  {
+   "text": "hampir",
+   "start": 53.02,
+   "end": 53.46,
+   "prob": 0.994
+  },
+  {
+   "text": "2x",
+   "start": 53.46,
+   "end": 54.12,
+   "prob": 0.633
+  },
+  {
+   "text": "lipat",
+   "start": 54.12,
+   "end": 54.52,
+   "prob": 0.981
+  },
+  {
+   "text": "dari",
+   "start": 54.52,
+   "end": 54.84,
+   "prob": 0.97
+  },
+  {
+   "text": "12",
+   "start": 54.84,
+   "end": 55.3,
+   "prob": 0.999
+  },
+  {
+   "text": "%",
+   "start": 55.3,
+   "end": 55.6,
+   "prob": 0.907
+  },
+  {
+   "text": "tadi.",
+   "start": 55.6,
+   "end": 56.06,
+   "prob": 0.994
+  },
+  {
+   "text": "Tapi",
+   "start": 56.06,
+   "end": 56.92,
+   "prob": 0.621
+  },
+  {
+   "text": "jujur",
+   "start": 56.92,
+   "end": 57.5,
+   "prob": 0.899
+  },
+  {
+   "text": "aja,",
+   "start": 57.5,
+   "end": 57.76,
+   "prob": 0.894
+  },
+  {
+   "text": "bunga",
+   "start": 58.34,
+   "end": 58.6,
+   "prob": 0.966
+  },
+  {
+   "text": "flat",
+   "start": 58.6,
+   "end": 58.9,
+   "prob": 0.821
+  },
+  {
+   "text": "nggak",
+   "start": 58.9,
+   "end": 59.22,
+   "prob": 0.458
+  },
+  {
+   "text": "selalu",
+   "start": 59.22,
+   "end": 59.62,
+   "prob": 0.993
+  },
+  {
+   "text": "jelek.",
+   "start": 59.62,
+   "end": 60.02,
+   "prob": 0.968
+  },
+  {
+   "text": "Cicilannya",
+   "start": 60.36,
+   "end": 60.86,
+   "prob": 0.826
+  },
+  {
+   "text": "tetap,",
+   "start": 60.86,
+   "end": 61.4,
+   "prob": 0.99
+  },
+  {
+   "text": "jadi",
+   "start": 61.64,
+   "end": 61.82,
+   "prob": 0.998
+  },
+  {
+   "text": "gampang",
+   "start": 61.82,
+   "end": 62.26,
+   "prob": 0.977
+  },
+  {
+   "text": "diatur.",
+   "start": 62.26,
+   "end": 62.68,
+   "prob": 0.963
+  },
+  {
+   "text": "Masalahnya",
+   "start": 63.18,
+   "end": 63.86,
+   "prob": 0.989
+  },
+  {
+   "text": "kalau",
+   "start": 63.86,
+   "end": 64.26,
+   "prob": 0.658
+  },
+  {
+   "text": "dibandingin",
+   "start": 64.26,
+   "end": 64.8,
+   "prob": 0.981
+  },
+  {
+   "text": "langsung",
+   "start": 64.8,
+   "end": 65.24,
+   "prob": 0.997
+  },
+  {
+   "text": "sama",
+   "start": 65.24,
+   "end": 65.56,
+   "prob": 0.993
+  },
+  {
+   "text": "bunga",
+   "start": 65.56,
+   "end": 65.9,
+   "prob": 0.999
+  },
+  {
+   "text": "efektif.",
+   "start": 65.9,
+   "end": 66.54,
+   "prob": 0.972
+  },
+  {
+   "text": "Jadi",
+   "start": 66.9,
+   "end": 67.22,
+   "prob": 0.966
+  },
+  {
+   "text": "sebelum",
+   "start": 67.22,
+   "end": 67.78,
+   "prob": 0.836
+  },
+  {
+   "text": "minjem,",
+   "start": 67.78,
+   "end": 68.16,
+   "prob": 0.685
+  },
+  {
+   "text": "tanya",
+   "start": 68.54,
+   "end": 68.74,
+   "prob": 0.964
+  },
+  {
+   "text": "bunga",
+   "start": 68.74,
+   "end": 69.08,
+   "prob": 0.994
+  },
+  {
+   "text": "efektifnya",
+   "start": 69.08,
+   "end": 69.66,
+   "prob": 0.973
+  },
+  {
+   "text": "per",
+   "start": 69.66,
+   "end": 69.86,
+   "prob": 0.661
+  },
+  {
+   "text": "tahun",
+   "start": 69.86,
+   "end": 70.12,
+   "prob": 0.976
+  },
+  {
+   "text": "berapa.",
+   "start": 70.12,
+   "end": 70.58,
+   "prob": 0.997
+  },
+  {
+   "text": "Cek",
+   "start": 71.0,
+   "end": 71.2,
+   "prob": 0.882
+  },
+  {
+   "text": "juga",
+   "start": 71.2,
+   "end": 71.52,
+   "prob": 0.993
+  },
+  {
+   "text": "biaya",
+   "start": 71.52,
+   "end": 71.76,
+   "prob": 0.954
+  },
+  {
+   "text": "admin",
+   "start": 71.76,
+   "end": 72.18,
+   "prob": 0.826
+  },
+  {
+   "text": "dan",
+   "start": 72.18,
+   "end": 72.4,
+   "prob": 0.993
+  },
+  {
+   "text": "asuransinya.",
+   "start": 72.4,
+   "end": 73.08,
+   "prob": 0.946
+  },
+  {
+   "text": "Karena",
+   "start": 73.5,
+   "end": 73.72,
+   "prob": 0.952
+  },
+  {
+   "text": "itu",
+   "start": 73.72,
+   "end": 73.98,
+   "prob": 0.989
+  },
+  {
+   "text": "biaya",
+   "start": 73.98,
+   "end": 74.22,
+   "prob": 0.992
+  },
+  {
+   "text": "tambahan",
+   "start": 74.22,
+   "end": 74.78,
+   "prob": 0.989
+  },
+  {
+   "text": "di",
+   "start": 74.78,
+   "end": 75.02,
+   "prob": 0.876
+  },
+  {
+   "text": "luar",
+   "start": 75.02,
+   "end": 75.26,
+   "prob": 0.998
+  },
+  {
+   "text": "bunga.",
+   "start": 75.26,
+   "end": 75.68,
+   "prob": 0.999
+  },
+  {
+   "text": "Nah",
+   "start": 76.24,
+   "end": 76.54,
+   "prob": 0.974
+  },
+  {
+   "text": "itu",
+   "start": 76.54,
+   "end": 77.2,
+   "prob": 0.424
+  },
+  {
+   "text": "jawabannya.",
+   "start": 77.2,
+   "end": 77.82,
+   "prob": 0.985
+  },
+  {
+   "text": "Bunga",
+   "start": 78.36,
+   "end": 78.58,
+   "prob": 0.956
+  },
+  {
+   "text": "flat",
+   "start": 78.58,
+   "end": 78.86,
+   "prob": 0.983
+  },
+  {
+   "text": "kelihatan",
+   "start": 78.86,
+   "end": 79.36,
+   "prob": 0.955
+  },
+  {
+   "text": "murah",
+   "start": 79.36,
+   "end": 79.76,
+   "prob": 0.996
+  },
+  {
+   "text": "karena",
+   "start": 79.76,
+   "end": 80.16,
+   "prob": 0.939
+  },
+  {
+   "text": "dihitung",
+   "start": 80.16,
+   "end": 80.62,
+   "prob": 0.859
+  },
+  {
+   "text": "dari",
+   "start": 80.62,
+   "end": 80.88,
+   "prob": 0.998
+  },
+  {
+   "text": "utang",
+   "start": 80.88,
+   "end": 81.18,
+   "prob": 0.986
+  },
+  {
+   "text": "awal.",
+   "start": 81.18,
+   "end": 81.66,
+   "prob": 0.998
+  },
+  {
+   "text": "Bukan",
+   "start": 81.98,
+   "end": 82.34,
+   "prob": 0.987
+  },
+  {
+   "text": "sisa",
+   "start": 82.34,
+   "end": 82.64,
+   "prob": 0.939
+  },
+  {
+   "text": "utang.",
+   "start": 82.64,
+   "end": 83.04,
+   "prob": 0.996
+  },
+  {
+   "text": "Pertanyaan",
+   "start": 83.38,
+   "end": 83.9,
+   "prob": 0.968
+  },
+  {
+   "text": "berikutnya",
+   "start": 83.9,
+   "end": 84.42,
+   "prob": 0.996
+  },
+  {
+   "text": "kamu",
+   "start": 84.42,
+   "end": 84.94,
+   "prob": 0.482
+  },
+  {
+   "text": "yang",
+   "start": 84.94,
+   "end": 85.14,
+   "prob": 0.999
+  },
+  {
+   "text": "pilih.",
+   "start": 85.14,
+   "end": 85.58,
+   "prob": 0.989
+  },
+  {
+   "text": "Tulis",
+   "start": 85.58,
+   "end": 86.08,
+   "prob": 0.848
+  },
+  {
+   "text": "di",
+   "start": 86.08,
+   "end": 86.2,
+   "prob": 0.979
+  },
+  {
+   "text": "komentar.",
+   "start": 86.2,
+   "end": 86.68,
+   "prob": 0.978
+  },
+  {
+   "text": "Nanti",
+   "start": 86.98,
+   "end": 87.44,
+   "prob": 0.987
+  },
+  {
+   "text": "Noel",
+   "start": 87.44,
+   "end": 87.88,
+   "prob": 0.719
+  },
+  {
+   "text": "menjawab.",
+   "start": 87.88,
+   "end": 88.48,
+   "prob": 0.985
+  }
+ ]
+}

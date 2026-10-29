@@ -1,0 +1,598 @@
+{
+ "videoId": "short-02",
+ "source": "skrip-short-02-bunga-flat.md",
+ "meta": {
+  "Channel": "Noel Menjawab",
+  "Judul YouTube": "Kenapa Bunga Flat Kelihatan Murah, Padahal Mahal? #shorts",
+  "Jumlah kata VO": "199 kata",
+  "Target durasi": "sekitar 80 detik (tempo 2,5 kata per detik, batas keras 90 detik)",
+  "Format": "Bangun dari nol: kamu bikin aturan bunga paling gampang, tiap perbaikan melahirkan masalah baru",
+  "Gaya visual": "3D stylized setara howcomeid (low poly tapi tidak terlalu low, grafik bersih dan berkelas), maket kampung yang hidup, satu tukang dan satu burung sebagai pemanis lucu",
+  "Tayang disarankan": "07.30 WIB"
+ },
+ "cast": [
+  {
+   "name": "Pak Dodi",
+   "role": "Tukang yang meminjam uang, mewakili \"kamu\""
+  },
+  {
+   "name": "Tuti",
+   "role": "Merpati pemanis lucu, mematuk papan dan koin"
+  },
+  {
+   "name": "Meja kasir PINJAMAN",
+   "role": "Benda mati tanpa wajah, tanpa logo bank atau merek asli"
+  }
+ ],
+ "scenes": [
+  {
+   "id": "S1",
+   "index": 0,
+   "title": "Hook, aturan paling gampang",
+   "type": "hook",
+   "durationHintSec": 9.2,
+   "vo": "Kalau kamu bikin aturan bunga paling gampang, hitung dari pinjaman awal, kamu sudah punya bunga flat. Tapi kelihatannya murah, padahal aslinya lebih mahal.",
+   "screenText": [
+    {
+     "raw": "Kenapa bunga flat",
+     "plain": "Kenapa bunga flat",
+     "star": "",
+     "segments": [
+      {
+       "text": "Kenapa bunga flat",
+       "highlight": false
+      }
+     ]
+    },
+    {
+     "raw": "*KELIHATAN MURAH?*",
+     "plain": "KELIHATAN MURAH?",
+     "star": "KELIHATAN MURAH?",
+     "segments": [
+      {
+       "text": "KELIHATAN MURAH?",
+       "highlight": true
+      }
+     ]
+    }
+   ],
+   "actions": [
+    {
+     "trigger": "bunga paling gampang",
+     "description": "Meja kasir kecil bertanda PINJAMAN muncul di tengah jalan kampung, kalkulator besar mendarat di atasnya dan layar kalkulator menyala satu baris sederhana."
+    },
+    {
+     "trigger": "bunga flat",
+     "description": "Papan kecil bertuliskan FLAT terpasang di meja dengan bunyi tok, Tuti mematuk papan itu sekali."
+    },
+    {
+     "trigger": "padahal aslinya lebih mahal",
+     "description": "Papan FLAT berkilau seperti diskon, lalu bayangan di belakangnya membesar pelan (foreshadowing)."
+    }
+   ],
+   "visual": "Jalan kampung 3D stylized pagi cerah, meja kasir dari kayu dengan kalkulator raksasa, langit biru berawan, rumah dan warung di belakang. Kamera dolly in lalu punch-in pada papan FLAT."
+  },
+  {
+   "id": "S2",
+   "index": 1,
+   "title": "Pak Dodi minjem",
+   "type": "loan",
+   "durationHintSec": 10.4,
+   "vo": "Jadi Pak Dodi minjem dua belas juta buat beli mesin molen. Bunganya satu persen per bulan, flat, selama setahun. Kelihatannya cuma dua belas persen per tahun.",
+   "screenText": [
+    {
+     "raw": "Pinjam *12 juta*",
+     "plain": "Pinjam 12 juta",
+     "star": "12 juta",
+     "segments": [
+      {
+       "text": "Pinjam ",
+       "highlight": false
+      },
+      {
+       "text": "12 juta",
+       "highlight": true
+      }
+     ]
+    },
+    {
+     "raw": "Bunga *1%* per bulan",
+     "plain": "Bunga 1% per bulan",
+     "star": "1%",
+     "segments": [
+      {
+       "text": "Bunga ",
+       "highlight": false
+      },
+      {
+       "text": "1%",
+       "highlight": true
+      },
+      {
+       "text": " per bulan",
+       "highlight": false
+      }
+     ]
+    },
+    {
+     "raw": "Kelihatan *12%* setahun",
+     "plain": "Kelihatan 12% setahun",
+     "star": "12%",
+     "segments": [
+      {
+       "text": "Kelihatan ",
+       "highlight": false
+      },
+      {
+       "text": "12%",
+       "highlight": true
+      },
+      {
+       "text": " setahun",
+       "highlight": false
+      }
+     ]
+    }
+   ],
+   "actions": [
+    {
+     "trigger": "Pak Dodi minjem",
+     "description": "Pak Dodi datang membawa kantong kosong, tumpukan uang mainan berpindah ke kantongnya, matanya berbinar."
+    },
+    {
+     "trigger": "mesin molen",
+     "description": "Mesin molen oranye muncul dengan efek pop, Pak Dodi memeluknya bangga."
+    },
+    {
+     "trigger": "dua belas persen",
+     "description": "Satu bulan bertanda 1% berubah menjadi dua belas kalender kecil berderet, hasilnya terbaca 12% di papan."
+    }
+   ],
+   "visual": "Warung dan bengkel kecil di belakang, uang mainan berwarna hangat, mesin molen oranye mengilap. Kamera orbit pelan mengitari Pak Dodi dan molen."
+  },
+  {
+   "id": "S3",
+   "index": 2,
+   "title": "Cicilan sama terus",
+   "type": "installment",
+   "durationHintSec": 7.6,
+   "vo": "Jadi tiap bulan dia bayar satu juta pokok, plus seratus dua puluh ribu bunga. Cicilannya sama terus, gampang diingat.",
+   "screenText": [
+    {
+     "raw": "Pokok *1 juta*",
+     "plain": "Pokok 1 juta",
+     "star": "1 juta",
+     "segments": [
+      {
+       "text": "Pokok ",
+       "highlight": false
+      },
+      {
+       "text": "1 juta",
+       "highlight": true
+      }
+     ]
+    },
+    {
+     "raw": "Bunga *120 ribu*",
+     "plain": "Bunga 120 ribu",
+     "star": "120 ribu",
+     "segments": [
+      {
+       "text": "Bunga ",
+       "highlight": false
+      },
+      {
+       "text": "120 ribu",
+       "highlight": true
+      }
+     ]
+    },
+    {
+     "raw": "Cicilan *tetap*",
+     "plain": "Cicilan tetap",
+     "star": "tetap",
+     "segments": [
+      {
+       "text": "Cicilan ",
+       "highlight": false
+      },
+      {
+       "text": "tetap",
+       "highlight": true
+      }
+     ]
+    }
+   ],
+   "actions": [
+    {
+     "trigger": "satu juta pokok",
+     "description": "Satu balok emas besar jatuh ke kotak cicilan dengan bunyi berat."
+    },
+    {
+     "trigger": "seratus dua puluh ribu bunga",
+     "description": "Balok kecil berwarna merah menempel di atas balok emas, tingginya sama persis di tiap bulan."
+    },
+    {
+     "trigger": "sama terus",
+     "description": "Kalender membalik cepat, tiap lembar menampilkan tumpukan yang sama persis, Pak Dodi mengangguk puas."
+    }
+   ],
+   "visual": "Kotak cicilan 3D berpenampang kaca, balok emas dan merah bertumpuk rapi, kalender flip besar di belakang, partikel koin ringan. Kamera tracking menyamping."
+  },
+  {
+   "id": "S4",
+   "index": 3,
+   "title": "Utang turun, bunga tetap",
+   "type": "balance",
+   "durationHintSec": 8,
+   "vo": "Tapi utangnya terus turun karena dicicil. Di bulan keenam, sisa utangnya tinggal separuh, sementara bunganya tetap seratus dua puluh ribu.",
+   "screenText": [
+    {
+     "raw": "Sisa utang *turun*",
+     "plain": "Sisa utang turun",
+     "star": "turun",
+     "segments": [
+      {
+       "text": "Sisa utang ",
+       "highlight": false
+      },
+      {
+       "text": "turun",
+       "highlight": true
+      }
+     ]
+    },
+    {
+     "raw": "Bunga *tetap*",
+     "plain": "Bunga tetap",
+     "star": "tetap",
+     "segments": [
+      {
+       "text": "Bunga ",
+       "highlight": false
+      },
+      {
+       "text": "tetap",
+       "highlight": true
+      }
+     ]
+    }
+   ],
+   "actions": [
+    {
+     "trigger": "utangnya terus turun",
+     "description": "Toples bening berisi uang mainan menyusut sedikit demi sedikit tiap kalender membalik."
+    },
+    {
+     "trigger": "bulan keenam",
+     "description": "Kalender berhenti di lembar ke enam, toples tinggal separuh, Tuti mengintip ke dalam toples."
+    },
+    {
+     "trigger": "tetap seratus dua puluh ribu",
+     "description": "Balok merah di sebelahnya masih setinggi tadi, Pak Dodi menunjuk bergantian ke toples dan balok dengan wajah bingung."
+    }
+   ],
+   "visual": "Toples kaca besar sebagai sisa utang di sisi kiri, balok bunga merah di sisi kanan, kontras tinggi yang jelas. Kamera push-in dari lebar ke dekat, lalu whip ke balok merah."
+  },
+  {
+   "id": "S5",
+   "index": 4,
+   "title": "Bayar bunga uang yang sudah dibalikin",
+   "type": "overpay",
+   "durationHintSec": 9.6,
+   "vo": "Jadi Pak Dodi bayar bunga buat uang yang sudah dia balikin. Kalau dihitung dari sisa utang, bunganya sekitar dua puluh satu persen per tahun.",
+   "screenText": [
+    {
+     "raw": "Bunga untuk uang yang *sudah dibalikin*",
+     "plain": "Bunga untuk uang yang sudah dibalikin",
+     "star": "sudah dibalikin",
+     "segments": [
+      {
+       "text": "Bunga untuk uang yang ",
+       "highlight": false
+      },
+      {
+       "text": "sudah dibalikin",
+       "highlight": true
+      }
+     ]
+    },
+    {
+     "raw": "Dari sisa utang: *sekitar 21%* setahun",
+     "plain": "Dari sisa utang: sekitar 21% setahun",
+     "star": "sekitar 21%",
+     "segments": [
+      {
+       "text": "Dari sisa utang: ",
+       "highlight": false
+      },
+      {
+       "text": "sekitar 21%",
+       "highlight": true
+      },
+      {
+       "text": " setahun",
+       "highlight": false
+      }
+     ]
+    }
+   ],
+   "actions": [
+    {
+     "trigger": "uang yang sudah dia balikin",
+     "description": "Koin keluar dari toples terbang ke meja kasir, balok merah tetap menagih koin yang sudah pergi, Pak Dodi kaget."
+    },
+    {
+     "trigger": "sisa utang",
+     "description": "Papan angka 12% retak dan runtuh, di baliknya muncul papan 21% yang lebih besar dengan getaran kamera."
+    },
+    {
+     "trigger": "dua puluh satu persen",
+     "description": "Tuti jatuh dari tiang karena terkejut, bulu beterbangan."
+    }
+   ],
+   "visual": "Meja kasir dari sudut rendah, papan 12% berbahan kayu retak sebelum diganti papan 21% yang lebih besar, cahaya sedikit redup. Kamera shake singkat saat papan runtuh."
+  },
+  {
+   "id": "S6",
+   "index": 5,
+   "title": "Namanya bunga efektif",
+   "type": "effective",
+   "durationHintSec": 7.6,
+   "vo": "Namanya bunga efektif. Itu angka yang sebenarnya kamu bayar, dan hampir dua kali lipat dari dua belas persen tadi.",
+   "screenText": [
+    {
+     "raw": "Namanya *bunga efektif*",
+     "plain": "Namanya bunga efektif",
+     "star": "bunga efektif",
+     "segments": [
+      {
+       "text": "Namanya ",
+       "highlight": false
+      },
+      {
+       "text": "bunga efektif",
+       "highlight": true
+      }
+     ]
+    },
+    {
+     "raw": "Hampir *2x lipat* dari 12%",
+     "plain": "Hampir 2x lipat dari 12%",
+     "star": "2x lipat",
+     "segments": [
+      {
+       "text": "Hampir ",
+       "highlight": false
+      },
+      {
+       "text": "2x lipat",
+       "highlight": true
+      },
+      {
+       "text": " dari 12%",
+       "highlight": false
+      }
+     ]
+    }
+   ],
+   "actions": [
+    {
+     "trigger": "bunga efektif",
+     "description": "Papan baru bertuliskan EFEKTIF tumbuh dari tanah di sebelah papan FLAT."
+    },
+    {
+     "trigger": "hampir dua kali lipat",
+     "description": "Papan 12% digandakan jadi dua tumpuk dan hampir pas setinggi papan 21%, Pak Dodi membandingkan dengan jari."
+    }
+   ],
+   "visual": "Taman kecil tempat papan FLAT dan EFEKTIF berdiri berdampingan di atas balok tanah potongan penampang, rumput lembut, cahaya hangat. Kamera orbit dan pull-out."
+  },
+  {
+   "id": "S7",
+   "index": 6,
+   "title": "Jujur, flat nggak selalu jelek",
+   "type": "nuance",
+   "durationHintSec": 8,
+   "vo": "Tapi jujur aja, bunga flat nggak selalu jelek. Cicilannya tetap, jadi gampang diatur. Masalahnya kalau dibandingin langsung sama bunga efektif.",
+   "screenText": [
+    {
+     "raw": "Flat *nggak selalu jelek*",
+     "plain": "Flat nggak selalu jelek",
+     "star": "nggak selalu jelek",
+     "segments": [
+      {
+       "text": "Flat ",
+       "highlight": false
+      },
+      {
+       "text": "nggak selalu jelek",
+       "highlight": true
+      }
+     ]
+    },
+    {
+     "raw": "Cicilan tetap = *gampang diatur*",
+     "plain": "Cicilan tetap = gampang diatur",
+     "star": "gampang diatur",
+     "segments": [
+      {
+       "text": "Cicilan tetap = ",
+       "highlight": false
+      },
+      {
+       "text": "gampang diatur",
+       "highlight": true
+      }
+     ]
+    },
+    {
+     "raw": "Jangan bandingin *flat vs efektif*",
+     "plain": "Jangan bandingin flat vs efektif",
+     "star": "flat vs efektif",
+     "segments": [
+      {
+       "text": "Jangan bandingin ",
+       "highlight": false
+      },
+      {
+       "text": "flat vs efektif",
+       "highlight": true
+      }
+     ]
+    }
+   ],
+   "actions": [
+    {
+     "trigger": "nggak selalu jelek",
+     "description": "Pak Dodi mengangkat jempol sambil memegang kalender cicilan rapi."
+    },
+    {
+     "trigger": "gampang diatur",
+     "description": "Tiga amplop bulanan tersusun rapi di meja, Tuti menata satu per satu."
+    },
+    {
+     "trigger": "dibandingin langsung",
+     "description": "Papan FLAT dan EFEKTIF ditaruh di timbangan, timbangan miring jelas ke satu sisi dan Pak Dodi mengerutkan dahi."
+    }
+   ],
+   "visual": "Meja Pak Dodi di rumah, cahaya sore keemasan, amplop dan kalender tertata, timbangan kayu di sudut. Kamera tracking pelan lalu close-up timbangan."
+  },
+  {
+   "id": "S8",
+   "index": 7,
+   "title": "Tips sebelum minjem",
+   "type": "tips",
+   "durationHintSec": 8.8,
+   "vo": "Jadi sebelum minjem, tanya bunga efektifnya per tahun berapa. Cek juga biaya admin dan asuransinya, karena itu biaya tambahan di luar bunga.",
+   "screenText": [
+    {
+     "raw": "Tanya *bunga efektif* per tahun",
+     "plain": "Tanya bunga efektif per tahun",
+     "star": "bunga efektif",
+     "segments": [
+      {
+       "text": "Tanya ",
+       "highlight": false
+      },
+      {
+       "text": "bunga efektif",
+       "highlight": true
+      },
+      {
+       "text": " per tahun",
+       "highlight": false
+      }
+     ]
+    },
+    {
+     "raw": "Cek *biaya admin* dan *asuransi*",
+     "plain": "Cek biaya admin dan asuransi",
+     "star": "biaya admin asuransi",
+     "segments": [
+      {
+       "text": "Cek ",
+       "highlight": false
+      },
+      {
+       "text": "biaya admin",
+       "highlight": true
+      },
+      {
+       "text": " dan ",
+       "highlight": false
+      },
+      {
+       "text": "asuransi",
+       "highlight": true
+      }
+     ]
+    }
+   ],
+   "actions": [
+    {
+     "trigger": "tanya bunga efektifnya",
+     "description": "Pak Dodi mengangkat tangan di depan meja kasir, balon tanya muncul bertuliskan EFEKTIF?."
+    },
+    {
+     "trigger": "biaya admin dan asuransinya",
+     "description": "Dua kantong kecil bertuliskan ADMIN dan ASURANSI muncul di samping meja, Tuti mematuk satu kantong dan koin berhamburan."
+    },
+    {
+     "trigger": "biaya tambahan",
+     "description": "Kantong-kantong itu ditaruh Pak Dodi di atas balok bunga sebagai tambahan tinggi."
+    }
+   ],
+   "visual": "Meja kasir dari sudut dekat, kantong kecil berwarna cerah, balon dialog 3D, cahaya hangat. Kamera push-in ke Pak Dodi lalu whip ke kantong."
+  },
+  {
+   "id": "S9",
+   "index": 8,
+   "title": "Penutup dan ajakan komentar",
+   "type": "cta",
+   "durationHintSec": 10.4,
+   "vo": "Nah, itu jawabannya. Bunga flat kelihatan murah karena dihitung dari utang awal, bukan sisa utang. Pertanyaan berikutnya kamu yang pilih. Tulis di komentar, nanti Noel Menjawab.",
+   "screenText": [
+    {
+     "raw": "Flat = hitung dari *utang awal*",
+     "plain": "Flat = hitung dari utang awal",
+     "star": "utang awal",
+     "segments": [
+      {
+       "text": "Flat = hitung dari ",
+       "highlight": false
+      },
+      {
+       "text": "utang awal",
+       "highlight": true
+      }
+     ]
+    },
+    {
+     "raw": "Pertanyaan berikutnya *kamu yang pilih*",
+     "plain": "Pertanyaan berikutnya kamu yang pilih",
+     "star": "kamu yang pilih",
+     "segments": [
+      {
+       "text": "Pertanyaan berikutnya ",
+       "highlight": false
+      },
+      {
+       "text": "kamu yang pilih",
+       "highlight": true
+      }
+     ]
+    },
+    {
+     "raw": "*Noel Menjawab*",
+     "plain": "Noel Menjawab",
+     "star": "Noel Menjawab",
+     "segments": [
+      {
+       "text": "Noel Menjawab",
+       "highlight": true
+      }
+     ]
+    }
+   ],
+   "actions": [
+    {
+     "trigger": "jawabannya",
+     "description": "Papan FLAT berputar jadi kartu jawaban dengan tanda centang."
+    },
+    {
+     "trigger": "kamu yang pilih",
+     "description": "Balon komentar 3D muncul beruntun di langit kampung, Pak Dodi dan Tuti menunjuk ke arah penonton."
+    },
+    {
+     "trigger": "Noel Menjawab",
+     "description": "End card logo teks Noel Menjawab turun dari atas dengan bunyi pop, kamera mundur panjang."
+    }
+   ],
+   "visual": "Jalan kampung sore keemasan, langit gradasi, balon komentar melayang, kamera pull-out panjang ke langit dengan end card."
+  }
+ ],
+ "voText": "Kalau kamu bikin aturan bunga paling gampang, hitung dari pinjaman awal, kamu sudah punya bunga flat. Tapi kelihatannya murah, padahal aslinya lebih mahal. Jadi Pak Dodi minjem dua belas juta buat beli mesin molen. Bunganya satu persen per bulan, flat, selama setahun. Kelihatannya cuma dua belas persen per tahun. Jadi tiap bulan dia bayar satu juta pokok, plus seratus dua puluh ribu bunga. Cicilannya sama terus, gampang diingat. Tapi utangnya terus turun karena dicicil. Di bulan keenam, sisa utangnya tinggal separuh, sementara bunganya tetap seratus dua puluh ribu. Jadi Pak Dodi bayar bunga buat uang yang sudah dia balikin. Kalau dihitung dari sisa utang, bunganya sekitar dua puluh satu persen per tahun. Namanya bunga efektif. Itu angka yang sebenarnya kamu bayar, dan hampir dua kali lipat dari dua belas persen tadi. Tapi jujur aja, bunga flat nggak selalu jelek. Cicilannya tetap, jadi gampang diatur. Masalahnya kalau dibandingin langsung sama bunga efektif. Jadi sebelum minjem, tanya bunga efektifnya per tahun berapa. Cek juga biaya admin dan asuransinya, karena itu biaya tambahan di luar bunga. Nah, itu jawabannya. Bunga flat kelihatan murah karena dihitung dari utang awal, bukan sisa utang. Pertanyaan berikutnya kamu yang pilih. Tulis di komentar, nanti Noel Menjawab.",
+ "voWordCount": 199
+}

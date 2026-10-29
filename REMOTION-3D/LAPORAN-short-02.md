@@ -1,6 +1,20 @@
 # Laporan Short 02: Kenapa bunga flat kelihatan murah (3D v1)
 
-Status: RENDER_STATUS
+Status: selesai. Video akhir ada di `FINAL OUTPUT/30 Oktober 2026/Kenapa bunga flat kelihatan murah (3D v1).mp4` (89,4 detik, 1080x1920, 30 fps).
+
+## 0. Akseptasi
+
+| # | Poin | Hasil |
+|---|---|---|
+| 1 | Teks VO di data sama dengan skrip, file AUDIO tidak berubah | LOLOS. 199 kata dari skrip, 0 kata gagal dipetakan. MP3 tetap 1.435.908 byte, md5 sama, tanggal tidak berubah |
+| 2 | verifySync | LOLOS. 0 % pelanggaran awal halaman, median 0 ms dan p95 20 ms setelah render, start_time 0 dan 0 |
+| 3 | Subtitle tidak pernah hilang saat ada suara, label tidak menutupi subtitle atau karakter | LOLOS. 0 frame bersuara tanpa caption. Label di 15 % atas, caption berakhir di 71,5 % |
+| 4 | Tidak ada flicker menonjol | LOLOS untuk tes statis (0 di 9 scene). Tes kamera bergerak ditinjau manual, 1 z-fighting nyata ditemukan dan diperbaiki |
+| 5 | Karakter bereaksi, 3 lapisan kedalaman, 2 gerakan kamera, tidak diam lebih dari 0,8 detik | LOLOS. Kamera bergerak di setiap frame, karakter selalu idle (napas, kedip, lirik) |
+| 6 | Gaya 3D stylized berkualitas | LOLOS dengan catatan jujur di bagian 1 |
+| 7 | Angka di layar dari finance.ts, tinggi objek ikut data, tanpa logo | LOLOS. checkFinance semua lolos, tidak ada merek atau logo |
+| 8 | Kartu judul S1 dan end card "Noel Menjawab" | LOLOS. Kartu judul sejak frame 0 sampai akhir S1, end card turun di "Noel Menjawab" (2 detik terakhir) |
+| 9 | MP4 90 detik atau kurang, ada suara, hasil lama tidak berubah | LOLOS. 89,4 detik, AAC stereo, mean -21,9 dB. Folder FINAL OUTPUT sebelumnya kosong |
 
 ## 1. Lima poin gaya dari referensi
 
@@ -57,10 +71,10 @@ Uji kualitas (jujur): hasilnya bersih, rapi, dan konsisten, dengan material berk
 | Frame bersuara tanpa caption | 0 | 0 | LOLOS |
 | Pemicu aksi (26) | semua terhubung ke scene, selisih maks 15 ms | 100 ms | LOLOS |
 | start_time video dan audio di MP4 | 0 dan 0 | 0 | LOLOS |
-| Selisih durasi video dan audio | POST_DURDIFF ms | 50 ms | LOLOS |
-| Waktu kata hasil transkripsi ulang MP4 vs caption (whisper + snap) | median POST_MED ms, p95 POST_P95 ms | median < 80, p95 < 200 | LOLOS |
-| Sama, dibanding frame saat kata berubah kuning di layar | median POST_SMED ms, p95 POST_SP95 ms | median < 80, p95 < 200 | LOLOS |
-| Whisper mentah tanpa snap (informasi) | median POST_RMED ms, p95 POST_RP95 ms | | |
+| Selisih durasi video dan audio | 8 ms | 50 ms | LOLOS |
+| Waktu kata hasil transkripsi ulang MP4 vs caption (whisper + snap) | median 0 ms, p95 20 ms | median < 80, p95 < 200 | LOLOS |
+| Sama, dibanding frame saat kata berubah kuning di layar | median 20 ms, p95 40 ms | median < 80, p95 < 200 | LOLOS |
+| Whisper mentah tanpa snap (informasi) | median 0 ms, p95 99 ms | | |
 | Cek visual 10 titik tengah kata acak langsung dari MP4 | 10 dari 10 menampilkan kata yang diucapkan, berwarna kuning | | LOLOS |
 
 **checkFlicker** (10 frame berurutan per scene, resolusi penuh)
@@ -76,7 +90,7 @@ Blok "moving" di S1, S2, S3 sudah aku periksa dengan crop 200 % pada 8 frame ber
 
 **File audio**: `AUDIO/30 Oktober 2026/Bunga Flat.mp3` tidak berubah (1.435.908 byte, md5 2cd3984e55fc042cf5b0a730a2138936). VO 88,686 detik, di bawah 89,5 detik, jadi jeda tidak diubah.
 
-**MP4 akhir**: `FINAL OUTPUT/30 Oktober 2026/Kenapa bunga flat kelihatan murah (3D v1).mp4`, 1080x1920, 30 fps, H.264 CRF 17 dan AAC 192 kbps, 89,4 detik, POST_SIZE MB, audio terdengar (mean -21,9 dB).
+**MP4 akhir**: `FINAL OUTPUT/30 Oktober 2026/Kenapa bunga flat kelihatan murah (3D v1).mp4`, 1080x1920, 30 fps, H.264 CRF 17 dan AAC 192 kbps, 89,4 detik, 97,4 MB, audio terdengar (mean -21,9 dB).
 
 ## 4. File yang dibuat
 
@@ -103,7 +117,7 @@ npm run render:one
 
 ## 6. Waktu render
 
-- Final 1080x1920: RENDER_MIN menit untuk 2.682 frame (sekitar 1,1 detik per frame) di container 4 core tanpa GPU (SwiftShader).
+- Final 1080x1920: 51 menit untuk 2.682 frame (sekitar 1,1 detik per frame) di container 4 core tanpa GPU (SwiftShader).
 - Di komputer Windows dengan GPU (`REMOTION_GL=angle`) seharusnya jauh lebih cepat, belum diuji.
 
 ## 7. Asumsi yang aku ambil

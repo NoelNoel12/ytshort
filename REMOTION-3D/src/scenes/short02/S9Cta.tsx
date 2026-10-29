@@ -23,12 +23,12 @@ const T = {
 };
 const SPIN = 20;
 const BALLOONS: { p: [number, number, number]; icon: "dots" | "heart" | "?"; color: string }[] = [
-  { p: [-2.3, 3.7, -0.8], icon: "?", color: "#FFFFFF" },
-  { p: [2.0, 4.3, -1.2], icon: "heart", color: "#FFF4D6" },
-  { p: [-0.5, 5.2, -1.8], icon: "dots", color: "#FFFFFF" },
-  { p: [2.9, 3.0, -0.2], icon: "?", color: "#E8F4FF" },
-  { p: [-3.0, 5.1, -2.4], icon: "dots", color: "#FFF4D6" },
-  { p: [0.9, 6.2, -2.8], icon: "heart", color: "#FFFFFF" },
+  { p: [-2.1, 3.4, -0.4], icon: "?", color: "#FFFFFF" },
+  { p: [1.9, 3.9, -0.8], icon: "heart", color: "#FFF4D6" },
+  { p: [-0.4, 4.7, -1.2], icon: "dots", color: "#FFFFFF" },
+  { p: [2.6, 2.7, 0.2], icon: "?", color: "#E8F4FF" },
+  { p: [-2.8, 4.9, -1.8], icon: "dots", color: "#FFF4D6" },
+  { p: [1.1, 5.7, -2.0], icon: "heart", color: "#FFFFFF" },
 ];
 
 const Set: SceneDef["Set"] = ({ ctx }) => {
@@ -89,7 +89,7 @@ const Set: SceneDef["Set"] = ({ ctx }) => {
       {BALLOONS.map((b, k) => {
         const s = pop(f, T.you + k * 4, "bouncy");
         if (s < 0.01) return null;
-        return <CommentBubble key={k} position={[b.p[0], b.p[1] + Math.sin(f / 14 + k) * 0.08, b.p[2]]} scale={s * 0.8} icon={b.icon} color={b.color} />;
+        return <CommentBubble key={k} position={[b.p[0], b.p[1] + Math.sin(f / 14 + k) * 0.08, b.p[2]]} scale={s * 1.25} icon={b.icon} color={b.color} />;
       })}
       <PakDodi frame={f} position={[-1.1, 0.06, 0.85]} rotY={keys1(f, [[ctx.from, 0.35], [T.utang - 4, 0.6], [T.bukan, -0.3], [T.you, 0.15]])} pose={pose} expr={expr} />
       <Tuti frame={f} position={[0.35, 0.06, 2.75]} rotY={keys1(f, [[ctx.from, -0.5], [T.you, -0.15]])} scale={1.1} sunglasses peck={Math.max(peck(f, ctx.from + 16), peck(f, T.answer + SPIN + 4))} flap={f >= T.you && f < T.you + 16 ? 1 : 0} />

@@ -21,9 +21,9 @@ const T = {
   compare: cue("S7", 2), // [dibandingin langsung]
   tapi: wordFrame("S7", "tapi"),
 };
-const TABLE: [number, number, number] = add(PORCH, [0.4, 0, 0.15]);
+const TABLE: [number, number, number] = add(PORCH, [-0.7, 0, 0.15]);
 const TOP = TABLE[1] + 0.89;
-const SCALE: [number, number, number] = add(PORCH, [2.05, 0, 0.35]);
+const SCALE: [number, number, number] = add(PORCH, [1.35, 0, 0.2]);
 const PAN_Y = 1.4 - 0.55 + 0.06; // pan surface relative to the scale base
 const ENV_N = 3;
 const MONTH_NAMES = ["JAN", "FEB", "MAR"];
@@ -79,10 +79,10 @@ const Set: SceneDef["Set"] = ({ ctx }) => {
   return (
     <group>
       <WoodTable position={TABLE} />
-      <PlasticChair position={add(PORCH, [-1.6, 0, 0.9])} rotY={0.7} color="#3C7DD9" />
+      <PlasticChair position={add(PORCH, [-2.3, 0, 0.9])} rotY={0.7} color="#3C7DD9" />
       <PottedPlant position={add(PORCH, [-2.9, 0, -0.9])} seed="pp1" />
       <PottedPlant position={add(PORCH, [3.0, 0, -0.9])} seed="pp2" scale={0.85} />
-      <PottedPlant position={add(PORCH, [-1.0, 0, -1.1])} seed="pp3" scale={0.7} />
+      <PottedPlant position={add(PORCH, [0.6, 0, -1.1])} seed="pp3" scale={0.7} />
       {envs.map((e, k) =>
         e.s > 0.01 ? <Envelope key={k} position={e.pos} rotation={[0, e.rot, 0]} scale={[e.s * 0.8, e.s * 0.8, e.s * 0.8]} label={MONTH_NAMES[k]} /> : null,
       )}
@@ -90,7 +90,7 @@ const Set: SceneDef["Set"] = ({ ctx }) => {
       <Dust frame={f} at={T.compare + 7} origin={add(SCALE, [-0.72, PAN_Y, 0])} count={5} spread={0.3} size={0.05} seed="s7a" />
       <PakDodi
         frame={f}
-        position={add(PORCH, [-0.45, 0, -0.55])}
+        position={add(PORCH, [-1.15, 0, -0.55])}
         rotY={keys1(f, [[ctx.from, 0.15], [T.compare + 10, 0.15], [T.compare + 20, 0.7]])}
         pose={pose}
         expr={expr}

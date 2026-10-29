@@ -20,11 +20,12 @@ export type TutiProps = {
   squash?: [number, number];
   eyesWide?: boolean;
   shadow?: boolean;
+  tuck?: boolean; // legs folded (flying)
   seed?: string;
 };
 
 // Grey pigeon with layered feathers. Does not talk.
-export const Tuti: React.FC<TutiProps> = ({ frame, position = [0, 0, 0], rotY = 0, scale = 1, peck = 0, flap = 0, headTurn = 0, bodyTilt = 0, roll = 0, sunglasses = false, squash = [1, 1], eyesWide = false, shadow = true, seed = "tuti" }) => {
+export const Tuti: React.FC<TutiProps> = ({ frame, position = [0, 0, 0], rotY = 0, scale = 1, peck = 0, flap = 0, headTurn = 0, bodyTilt = 0, roll = 0, sunglasses = false, squash = [1, 1], eyesWide = false, shadow = true, tuck = false, seed = "tuti" }) => {
   const lid = blink(frame, seed, 45, 100);
   const breath = Math.sin((frame / 30) * Math.PI * 2 * 0.8) * 0.02;
   // Idle head bob, the pigeon way
@@ -36,7 +37,7 @@ export const Tuti: React.FC<TutiProps> = ({ frame, position = [0, 0, 0], rotY = 
       {shadow && <mesh position={[0, 0.012, 0]} rotation={[-Math.PI / 2, 0, 0]} geometry={circle(0.24)} material={M.blob()} renderOrder={2} />}
       <group rotation={[bodyTilt, 0, roll]}>
         {/* Legs */}
-        {[-1, 1].map((s) => (
+        {!tuck && [-1, 1].map((s) => (
           <group key={s} position={[s * 0.05, 0.07, 0.02]}>
             <mesh geometry={cyl(0.012, 0.012, 0.12, 10)} material={M.orangeFoot()} />
             {[-0.5, 0, 0.5].map((a) => (

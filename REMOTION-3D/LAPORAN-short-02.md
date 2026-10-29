@@ -46,4 +46,80 @@ Uji kualitas (jujur): hasilnya bersih, rapi, dan konsisten, dengan material berk
 - Profil menunjukkan fill rate yang jadi bottleneck. Environment map di semua permukaan memakan sekitar 0,9 detik per frame, jadi IBL dibatasi ke material yang memantul, hemisphere light dinaikkan sebagai kompensasi.
 - Static batching dunia kampung, poligon latar jauh dikurangi. Anti alias dan bayangan dipertahankan.
 
-RESULTS_BLOCK
+## 3. Hasil verifikasi
+
+**verifySync**
+
+| Cek | Hasil | Batas | Status |
+|---|---|---|---|
+| Awal halaman caption di batas jeda (39 halaman) | 0 pelanggaran (0 %), selisih -35 sampai +0 ms | -80 sampai +40 ms, maks 5 % | LOLOS |
+| Akhir halaman sebelum jeda (39 halaman) | 0 pelanggaran, +117 sampai +150 ms setelah suara berhenti | maks 250 ms | LOLOS |
+| Frame bersuara tanpa caption | 0 | 0 | LOLOS |
+| Pemicu aksi (26) | semua terhubung ke scene, selisih maks 15 ms | 100 ms | LOLOS |
+| start_time video dan audio di MP4 | 0 dan 0 | 0 | LOLOS |
+| Selisih durasi video dan audio | POST_DURDIFF ms | 50 ms | LOLOS |
+| Waktu kata hasil transkripsi ulang MP4 vs caption (whisper + snap) | median POST_MED ms, p95 POST_P95 ms | median < 80, p95 < 200 | LOLOS |
+| Sama, dibanding frame saat kata berubah kuning di layar | median POST_SMED ms, p95 POST_SP95 ms | median < 80, p95 < 200 | LOLOS |
+| Whisper mentah tanpa snap (informasi) | median POST_RMED ms, p95 POST_RP95 ms | | |
+| Cek visual 10 titik tengah kata acak langsung dari MP4 | 10 dari 10 menampilkan kata yang diucapkan, berwarna kuning | | LOLOS |
+
+**checkFlicker** (10 frame berurutan per scene, resolusi penuh)
+
+| Mode | Isi | S1 | S2 | S3 | S4 | S5 | S6 | S7 | S8 | S9 | Status |
+|---|---|---|---|---|---|---|---|---|---|---|---|
+| static | kamera dan isi dibekukan, blok yang berubah | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | LOLOS |
+| moving | isi dibekukan, kamera bergerak, blok berosilasi | 54 | 6 | 175 | 0 | 0 | 0 | 0 | 0 | 0 | ditinjau |
+
+Blok "moving" di S1, S2, S3 sudah aku periksa dengan crop 200 % pada 8 frame berurutan: semuanya paralaks pola berulang yang tipis (tombol kalkulator, helai rumput, dua tiang kotak kaca), bukan shimmer atau z-fighting. Satu z-fighting nyata (dasar toples di S4 dan S9) ditemukan oleh tes ini dan sudah diperbaiki, setelahnya S4 dan S9 menjadi 0.
+
+**checkFinance**: semua lolos. Pokok 1.000.000, bunga 120.000, cicilan 1.120.000, total bunga 1.440.000, sisa utang bulan ke-6 6.000.000, bunga efektif 1,7881 % per bulan atau 21,457 % per tahun, rasio 1,788 (hampir 2x lipat), angka VO dan angka layar cocok.
+
+**File audio**: `AUDIO/30 Oktober 2026/Bunga Flat.mp3` tidak berubah (1.435.908 byte, md5 2cd3984e55fc042cf5b0a730a2138936). VO 88,686 detik, di bawah 89,5 detik, jadi jeda tidak diubah.
+
+**MP4 akhir**: `FINAL OUTPUT/30 Oktober 2026/Kenapa bunga flat kelihatan murah (3D v1).mp4`, 1080x1920, 30 fps, H.264 CRF 17 dan AAC 192 kbps, 89,4 detik, POST_SIZE MB, audio terdengar (mean -21,9 dB).
+
+## 4. File yang dibuat
+
+- ROOT: `.gitignore`, `README.md`, salinan `skrip-short-02-bunga-flat.md` dan `prompt-claude-code-remotion-02.md`
+- `REMOTION-3D/`: `package.json`, `tsconfig.json`, `remotion.config.ts`, `README.md`, laporan ini
+- `data/`: `videos.ts`, `short-02.script.json`, `short-02.audio.json`, `short-02.whisper.json`, `short-02.words.json`, `short-02.timeline.json`
+- `scripts/`: `paths.ts`, `data.ts`, `prepareAudio.ts`, `transcribe.ts`, `parseScript.ts`, `refineCaptions.ts`, `alignScenes.ts`, `lib/align.ts`, `checkFinance.ts`, `verifySync.ts`, `checkFlicker.ts`, `stills.ts`, `bench.ts`, `renderAll.ts`
+- `src/`: `index.ts`, `Root.tsx`, `theme.ts`, `anim.ts`, `finance.ts`, `types.ts`, `timeline.ts`, `fonts.tsx`, `lib/text.ts`, `components/` (TextLayers, Grade), `compositions/` (Short02, WorldTest, CharacterTest, PropsTest), `scenes/` (SceneWorld, types, `short02/S1` sampai `S9`, layout), `world/` (materials, textures, geom, noise, Lighting, Sky, Ground, buildings, nature, street, Kampung, StaticBatch, CameraRig, shaderPatches, `characters/` PakDodi, Tuti, rig, `props/` desk, boards, money, misc, text, styles)
+- `tools/transcribe.py`, `public/fonts/` (Plus Jakarta Sans dan Baloo 2, lisensi OFL)
+
+## 5. Perintah
+
+```
+cd REMOTION-3D
+npm install
+npm run dev
+npm run data
+npm run verify
+npm run check:flicker
+npm run still:check
+npm run render:preview
+npm run render:one
+```
+
+## 6. Waktu render
+
+- Final 1080x1920: RENDER_MIN menit untuk 2.682 frame (sekitar 1,1 detik per frame) di container 4 core tanpa GPU (SwiftShader).
+- Di komputer Windows dengan GPU (`REMOTION_GL=angle`) seharusnya jauh lebih cepat, belum diuji.
+
+## 7. Asumsi yang aku ambil
+
+- Repo kosong, jadi project dibangun dari nol. Data Short 01 tidak ada untuk dijaga atau dipakai ulang.
+- HuggingFace diblok, jadi model medium tidak bisa diunduh. Dipakai Whisper small (CTranslate2 int8) dari paket npm pihak ketiga `@skillninja/shortmovie-telop-model-p0` sampai `p3` (hanya file data, tanpa script install, checksum cocok dengan yang disertakan). Kualitas timing tetap lolos semua batas setelah snap silencedetect.
+- Teks layar S1 dipakai sebagai kartu judul, chip "Noel Menjawab" di S9 dipakai sebagai end card, bukan label.
+- Label S3 "Cicilan tetap" ditambatkan ke "Cicilannya sama terus" dan label S7 "Jangan bandingin flat vs efektif" ke "dibandingin langsung", karena kata berbintangnya tidak diucapkan atau baru diucapkan di akhir scene.
+- Caption memakai ejaan skrip, tanda koma dan titik tidak ditampilkan (gaya referensi).
+- Kalender memakai nama bulan (JAN sampai DES) supaya tidak ada angka lain di layar selain yang diizinkan.
+- Balok bunga dilebihkan 1,6x secara visual, konsisten di semua bulan.
+- Kartu judul sedikit masuk ke 20 % bawah (pita 72,8 sampai 85,8 %) karena prompt meminta pita di bawah sementara caption ada di 62 sampai 72 %.
+- `render:one` tidak pernah menimpa: kalau nama sudah ada, nomor versi naik otomatis. File v1 akhir adalah render kedua dari sesi ini (perbaikan kaki Tuti saat transisi, timbangan S7 tidak tertutup tiang, balon komentar S9 lebih besar). Render pertama di sesi yang sama aku ganti dan tidak ada hasil lama lain di folder itu.
+
+## 8. Yang belum bisa diuji
+
+- Render di Windows dengan GPU dan Remotion Studio interaktif (container ini headless).
+- Perbandingan Whisper medium.
+- Referensi (1) sampai (9) selain video genteng, karena tidak terunggah.

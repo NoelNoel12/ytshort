@@ -83,7 +83,7 @@ export const SceneWorld: React.FC<{ scenes: SceneDef[]; frame: number; lockCamer
     const pos = new THREE.Vector3(...shot.pos);
     const fwd = new THREE.Vector3(...shot.target).sub(pos).normalize();
     const right = new THREE.Vector3().crossVectors(fwd, new THREE.Vector3(0, 1, 0)).normalize();
-    const p = pos.clone().add(fwd.clone().multiplyScalar(0.75)).add(right.clone().multiplyScalar(THREE.MathUtils.lerp(-0.9, 0.9, fly))).add(new THREE.Vector3(0, -0.12 + Math.sin(fly * Math.PI) * 0.1, 0));
+    const p = pos.clone().add(fwd.clone().multiplyScalar(0.75)).add(right.clone().multiplyScalar(THREE.MathUtils.lerp(-0.9, 0.9, fly))).add(new THREE.Vector3(0, -0.32 + Math.sin(fly * Math.PI) * 0.08, 0));
     flyPos = [p.x, p.y, p.z];
     flyRot = Math.atan2(right.x, right.z);
   }
@@ -98,7 +98,7 @@ export const SceneWorld: React.FC<{ scenes: SceneDef[]; frame: number; lockCamer
         </StaticBatch>
       )}
       <def.Set ctx={ctx} />
-      {flyPos && <Tuti frame={frame} position={flyPos} rotY={flyRot} scale={1.6} flap={1} bodyTilt={0.25} shadow={false} seed="flyby" />}
+      {flyPos && <Tuti frame={frame} position={flyPos} rotY={flyRot} scale={1.6} flap={1} bodyTilt={0.25} shadow={false} tuck seed="flyby" />}
     </>
   );
 };

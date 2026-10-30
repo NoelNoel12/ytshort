@@ -1,20 +1,20 @@
 # Laporan Short 04: Kenapa sinyal HP hilang di lift (3D v1)
 
-Status: TBD_STATUS
+Status: selesai. Video akhir ada di `FINAL OUTPUT/30 Oktober 2026/Kenapa sinyal HP hilang di lift (3D v1).mp4` (83,7 detik, 1080x1920, 30 fps).
 
 ## 0. Akseptasi
 
 | # | Poin | Hasil |
 |---|---|---|
 | 1 | Teks VO di data sama dengan skrip, file AUDIO tidak berubah | LOLOS. 184 kata dari skrip, 184 terpetakan, 0 gagal. `AUDIO/30 Oktober 2026/Sinyal Lift.mp3` identik dengan file yang diunggah (1.342.285 byte, md5 6a74ded59fb8687f6b9de9f90db0793a) |
-| 2 | verifySync | TBD_SYNC |
+| 2 | verifySync | LOLOS. 0 % pelanggaran awal dan akhir halaman, 27 dari 27 pemicu aksi tepat, median 0 ms dan p95 20 ms setelah render, start_time 0 dan 0, offset VO di mix 0 ms |
 | 3 | Aturan baru 1: subtitle tidak menutupi aksi utama | LOLOS. checkTextOverlap memeriksa 66 halaman caption di setiap frame terhadap aksi utama, kartu judul, label, dan end card. Hasilnya 0 halaman menyentuh |
 | 4 | Aturan baru 2: tidak ada kotak hitam di belakang judul dan subtitle, judul tetap terbaca | LOLOS. Gaya "clean": teks putih dan kuning dengan outline gelap 13 sampai 16 px dan bayangan lembut, tanpa pita, kotak, atau latar apa pun |
 | 5 | Aturan baru 3: sound effect | LOLOS. 74 cue dari 24 efek, semuanya terdengar di hasil render, tidak ada yang menutupi narasi |
-| 6 | Tidak ada flicker menonjol | TBD_FLICKER |
+| 6 | Tidak ada flicker menonjol | LOLOS untuk tes statis (0 di 9 scene). Tes kamera bergerak ditinjau manual, tidak ada z-fighting atau shimmer yang ditemukan |
 | 7 | Tanpa angka di layar, HP, menara, dan lift generik tanpa logo | LOLOS. checkFinance mode "none": 22 chip teks diperiksa, 0 angka. Tidak ada merek atau logo |
 | 8 | Kartu judul S1 dan end card "Noel Menjawab" | LOLOS. Judul di atas sejak frame 0 sampai akhir S1, end card turun di kata "Noel Menjawab" |
-| 9 | MP4 90 detik atau kurang, ada suara, hasil lama tidak berubah | TBD_MP4 |
+| 9 | MP4 90 detik atau kurang, ada suara, hasil lama tidak berubah | LOLOS. 83,7 detik, AAC stereo, mean -21,6 dB, puncak -4,5 dB. File Short 02 di folder yang sama tidak tersentuh (97.446.893 byte, tanggal 29 Oktober) |
 
 ## 1. Lima poin gaya dari referensi
 
@@ -51,6 +51,7 @@ Uji kualitas (jujur): hasilnya rapi dan konsisten dengan Short 02. Gelombang sin
 
 **Hal lain yang ikut diperbaiki**
 - Komposisi generik `ShortVideo` dipakai Short 02 dan Short 04, dengan mode audio saja untuk cek mix cepat (sekitar 30 detik).
+- Caption dua baris sekarang memakai `text-wrap: balance` di komponen bersama. MP4 Short 02 tidak berubah, tapi kalau Short 02 dirender ulang, pemotongan baris caption-nya akan sedikit lebih seimbang. Komposisi Short 02 sudah aku cek masih bisa dirender.
 - verifySync untuk mix dengan SFX: offset VO diukur dengan cross-correlation terhadap file VO, snapping memakai jeda dari VO asli (silencedetect di mix tidak bisa dipercaya karena jeda terisi SFX), dan setiap cue SFX dicek terdengar.
 
 ## 3. Hasil verifikasi
@@ -65,15 +66,43 @@ Uji kualitas (jujur): hasilnya rapi dan konsisten dengan Short 02. Gelombang sin
 
 **verifySync**
 
-TBD_SYNC_TABLE
+| Cek | Hasil | Batas | Status |
+|---|---|---|---|
+| Awal halaman caption di batas jeda (37 dari 66 halaman) | 0 pelanggaran (0 %) | maks 5 % | LOLOS |
+| Akhir halaman sebelum jeda (37 halaman) | 0 pelanggaran | maks 250 ms | LOLOS |
+| Frame bersuara tanpa caption | 0 | 0 | LOLOS |
+| Pemicu aksi (27) | semua terhubung ke scene, selisih maks 13 ms | 100 ms | LOLOS |
+| start_time video dan audio di MP4 | 0 dan 0 | 0 | LOLOS |
+| Selisih durasi video dan audio | 2 ms | 50 ms | LOLOS |
+| Offset VO di dalam mix (cross-correlation dengan file VO) | 0 ms, gain 0,998 | 10 ms | LOLOS |
+| Waktu kata hasil transkripsi ulang MP4 vs caption (whisper + snap ke jeda VO) | median 0 ms, p95 20 ms, maks 40 ms | median < 80, p95 < 200 | LOLOS |
+| Sama, dibanding frame saat kata berubah kuning di layar | median 20 ms, p95 47 ms, maks 67 ms | median < 80, p95 < 200 | LOLOS |
+| Whisper mentah tanpa snap (informasi) | median 0 ms, p95 182 ms, maks 443 ms | | |
+| Cek visual 10 titik tengah kata langsung dari MP4 | 10 dari 10 menampilkan kata yang diucapkan, berwarna kuning | | LOLOS |
+
+Catatan cek visual: untuk kata "Pak" (cuma 100 ms atau 3 frame) titik tengahnya jatuh di antara frame 336 dan 337. Pengambilan pertama memberi frame 337 yang sudah menyorot "Dodi". Frame 336 aku ambil ulang secara tepat dan "Pak" berwarna kuning.
 
 **Mix audio**
 
-TBD_AUDIO_TABLE
+| Cek | Hasil | Status |
+|---|---|---|
+| Cue SFX yang terdengar di MP4 (12 dB di atas lantai sisa -66,4 dBFS) | 74 dari 74 | LOLOS |
+| Efek paling keras (RMS 250 ms) | -18,1 dBFS | |
+| Efek saat ada narasi | paling keras sekitar 3 sampai 6 dB di bawah VO di jendela yang sama, sebagian besar lebih rendah lagi | LOLOS |
+| Cue yang diturunkan oleh mixSfx | 52 dari 74 (gain terkecil 0,07) | |
+| Puncak mix | -4,5 dB (tidak clipping) | LOLOS |
+| VO speech RMS (acuan) | -19,3 dBFS | |
+
+Efek yang dipakai (jumlah cue): pop 14, whoosh 12, wave 7, boing 7, blip 5, flap 4, sparkle 3, thud 3, fadeOut 2, buzz 2, zip 2, lalu masing-masing 1 untuk clang, ding, barsDown, callDrop, ripple, servo, barsUp, rumble, click, ghost, poof, correct, bigPop.
 
 **checkFlicker** (10 frame berurutan per scene, resolusi penuh)
 
-TBD_FLICKER_TABLE
+| Mode | Isi | S1 | S2 | S3 | S4 | S5 | S6 | S7 | S8 | S9 | Status |
+|---|---|---|---|---|---|---|---|---|---|---|---|
+| static | kamera dan isi dibekukan, blok yang berubah | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | LOLOS |
+| moving | isi dibekukan, kamera bergerak, blok berosilasi | 47 | 98 | 5 | 0 | 128 | 220 | 108 | 8 | 7 | ditinjau |
+
+Blok "moving" aku periksa dengan crop 200 % pada 6 frame berurutan dan peta selisih orde dua (|f[t-1] - 2 f[t] + f[t+1]|) untuk setiap scene. Yang menyala hanya garis tepi objek yang ikut bergerak saat kamera handheld berbalik arah. S6 paling banyak karena jendela ujinya jatuh tepat di guncangan kamera yang disengaja saat kabin berhenti (frame 1560). Tidak ada bercak di permukaan yang menandakan z-fighting dan tidak ada bintik merayap yang menandakan shimmer. Satu garis tipis 1 px di tepi pintu lantai lobi S2 terlihat putus-putus saat bergerak, ukurannya sangat kecil dan aku biarkan.
 
 ## 4. File yang dibuat atau diubah
 
@@ -97,7 +126,10 @@ npm run render:one:04
 
 ## 6. Waktu render
 
-TBD_RENDER
+- Final 1080x1920: 54,3 menit untuk 2.510 frame (sekitar 1,3 detik per frame) dengan concurrency 2 di container 4 core tanpa GPU (SwiftShader). Sedikit lebih lambat per frame dari Short 02 karena gedung, kabin baja yang memantul, dan cincin transparan.
+- Mix audio saja (`render:mix:04`): sekitar 30 detik.
+- checkFlicker static dan moving: masing-masing sekitar 6 menit.
+- File akhir 86,7 MB, H.264 CRF 17 (sekitar 8,1 Mbps) dan AAC 192 kbps.
 
 ## 7. Asumsi yang aku ambil
 

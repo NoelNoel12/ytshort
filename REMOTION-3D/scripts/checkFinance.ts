@@ -5,9 +5,17 @@ import * as F from "../src/finance";
 import { normTokens } from "../src/lib/text";
 import type { ScriptData } from "../src/types";
 import { arg, dataFile, readJson } from "./paths";
+import { getVideo } from "../data/videos";
 
 const id = arg(0, "short-02")!;
 let fails = 0;
+// Videos without numbers on screen: every chip and every 3D label string must be digit-free
+if (getVideo(id).numbers === "none") {
+  const script = readJson<ScriptData>(dataFile(id, "script"));
+  const bad = script.scenes.flatMap((s) => s.screenText.filter((c) => /\d/.test(c.plain)).map((c) => `${s.id}: ${c.plain}`));
+  console.log(`${bad.length ? "FAIL" : "PASS"}  no numbers in screen text           ${bad.length ? bad.join(", ") : script.scenes.reduce((a, s) => a + s.screenText.length, 0) + " chips checked"}`);
+  process.exit(bad.length ? 1 : 0);
+}
 const check = (name: string, ok: boolean, detail: string) => {
   console.log(`${ok ? "PASS" : "FAIL"}  ${name.padEnd(34)} ${detail}`);
   if (!ok) fails++;

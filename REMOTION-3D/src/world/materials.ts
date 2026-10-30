@@ -151,4 +151,4 @@ export const goldMaterials = (): THREE.MeshStandardMaterial[] => [M.gold(), M.co
 // Only these materials get image-based reflections. IBL on every surface costs about 1 s per frame
 // in software GL, and diffuse surfaces get their ambient from the hemisphere light instead.
 export const reflectiveMaterials = (): THREE.MeshStandardMaterial[] =>
-  [M.jarGlass(), M.boxGlass(), M.steel(), M.darkMetal(), M.helmet(), M.windowGlass(), M.pigeonNeck(), std("shades", { color: "#121318", roughness: 0.08, metalness: 0.7 })] as THREE.MeshStandardMaterial[];
+  [std("cabinSteel", { color: "#C7CDD6", roughness: 0.32, metalness: 0.85, envMapIntensity: 1.3 }), M.jarGlass(), M.boxGlass(), M.steel(), M.darkMetal(), M.helmet(), M.windowGlass(), M.pigeonNeck(), std("shades", { color: "#121318", roughness: 0.08, metalness: 0.7 })] as THREE.MeshStandardMaterial[];

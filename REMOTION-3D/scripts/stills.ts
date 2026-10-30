@@ -6,13 +6,15 @@ import { bundle } from "@remotion/bundler";
 import { renderStill, selectComposition } from "@remotion/renderer";
 import { OUT, PROJECT, opt, flag, run } from "./paths";
 import type { Timeline } from "../src/types";
+import { VIDEOS } from "../data/videos";
 
 const comp = process.argv[2] ?? "Short02";
 const spec = process.argv[3] ?? "0";
 const outDir = opt("out") ?? path.join(OUT, "stills", comp);
 const scale = Number(opt("scale") ?? 0.5);
 
-const tl = JSON.parse(fs.readFileSync(path.join(PROJECT, "data", "short-02.timeline.json"), "utf8")) as Timeline;
+const video = Object.values(VIDEOS).find((v) => v.compositionId === comp) ?? VIDEOS["short-02"];
+const tl = JSON.parse(fs.readFileSync(path.join(PROJECT, "data", `${video.id}.timeline.json`), "utf8")) as Timeline;
 const framesFor = (s: string): number[] => {
   if (/^S\d+$/.test(s)) {
     // Start, middle and end of one scene plus each action trigger

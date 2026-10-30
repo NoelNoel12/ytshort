@@ -41,6 +41,8 @@ export const theme = {
 
   caption: {
     bottomPct: 0.715, // bottom edge of the subtitle block; 1 or 2 lines stay inside 62 to 72 percent
+    // Alternative bottoms used when the main action sits behind the default band (captionPlacement)
+    altBottoms: [0.81, 0.36, 0.275],
     fontSize: 74,
     stroke: 14,
     color: "#FFFFFF",
@@ -61,6 +63,7 @@ export const theme = {
     bandHeightPct: 0.13,
     line1Size: 64,
     line2Size: 96,
+    cleanTopPct: 0.105, // clean style: title sits at the top (no band)
   },
 
   grade: {

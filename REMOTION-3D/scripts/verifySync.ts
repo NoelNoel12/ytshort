@@ -79,9 +79,9 @@ failed ||= !p1;
 // ---------- 4. action triggers ----------
 console.log("== 4. Action triggers (word start vs action frame)");
 const sceneSrc = fs
-  .readdirSync(path.join(PROJECT, "src", "scenes"), { recursive: true })
+  .readdirSync(path.join(PROJECT, "src", "scenes", cfg.sceneDir), { recursive: true })
   .filter((f) => String(f).endsWith(".tsx"))
-  .map((f) => fs.readFileSync(path.join(PROJECT, "src", "scenes", String(f)), "utf8"))
+  .map((f) => fs.readFileSync(path.join(PROJECT, "src", "scenes", cfg.sceneDir, String(f)), "utf8"))
   .join("\n");
 let trigBad = 0;
 for (const t of tl.triggers) {

@@ -5,6 +5,7 @@ import { DirtPatch, Ground, GrassTufts, Pebbles } from "./Ground";
 import { BananaTree, Bush, CoconutTree, RoundTree } from "./nature";
 import { Bench, Motorbike, PlasticChair, PowerLine, StreetLamp } from "./street";
 import { TreeLine } from "./Sky";
+import { Building, Tower } from "./short04/Building";
 
 // Named spots that scenes use
 export const SPOTS = {
@@ -22,15 +23,24 @@ const avoidRoadSouth = (_x: number, z: number) => z < 6 || z > 9.4;
 const avoidGarden = (x: number, z: number) => Math.abs(x - SPOTS.garden[0]) < 3.6 && Math.abs(z - SPOTS.garden[2]) < 2.6;
 
 // Static world: memoised so React never re-renders it per frame
-export const Kampung: React.FC<{ detail?: 0 | 1 | 2 }> = React.memo(() => {
+export type KampungVariant = "default" | "short04";
+
+export const Kampung: React.FC<{ variant?: KampungVariant }> = React.memo(({ variant = "default" }) => {
+  const s04 = variant === "short04";
   return (
     <group>
       <Ground />
+      {s04 && (
+        <>
+          <Building />
+          <Tower />
+        </>
+      )}
       {/* Row 1 north, facing the road */}
       <House position={[-31, 0, -11.5]} wall={WALLS[0]} roof={ROOFS[0]} brick />
       <House position={SPOTS.dodiHouse} wall={WALLS[1]} roof={ROOFS[1]} door="#4F86C6" porch w={7} />
       <Bengkel position={[-11.5, 0, -9.6]} />
-      <House position={[-2.5, 0, -11.8]} wall={WALLS[2]} roof={ROOFS[2]} windows={1} w={5.6} />
+      {!s04 && <House position={[-2.5, 0, -11.8]} wall={WALLS[2]} roof={ROOFS[2]} windows={1} w={5.6} />}
       <Warung position={[6.5, 0, -8.6]} />
       <House position={[15.5, 0, -11.6]} wall={WALLS[3]} roof={ROOFS[3]} />
       <House position={[38, 0, -11.5]} wall={WALLS[4]} roof={ROOFS[0]} />
@@ -85,7 +95,7 @@ export const Kampung: React.FC<{ detail?: 0 | 1 | 2 }> = React.memo(() => {
       <CoconutTree position={[-12, 0, 16]} height={8} lean={0.25} rotY={3.4} seed="p7" />
       <CoconutTree position={[13, 0, 16.5]} height={7.6} lean={-0.2} rotY={0.8} seed="p8" />
       <BananaTree position={[-16.5, 0, -8.2]} seed="b1" />
-      <BananaTree position={[2.6, 0, -9]} seed="b2" height={2.3} />
+      {!s04 && <BananaTree position={[2.6, 0, -9]} seed="b2" height={2.3} />}
       <BananaTree position={[19.8, 0, -8.6]} seed="b3" />
       <BananaTree position={[-35.5, 0, -8.4]} seed="b4" height={2.2} />
       <BananaTree position={[-14, 0, 8.6]} seed="b5" />

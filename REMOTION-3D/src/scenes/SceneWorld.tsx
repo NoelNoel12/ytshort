@@ -9,13 +9,13 @@ import { CameraRig, type CamShot } from "../world/CameraRig";
 import { Tuti } from "../world/characters/Tuti";
 import { handheld } from "../anim";
 import type { SceneCtx, SceneDef } from "./types";
-import { TL } from "../timeline";
+import type { Timeline } from "../types";
 
 export const WHIP_FRAMES = 4; // per side, 8 in total
 
 export type ActiveScene = { def: SceneDef; ctx: SceneCtx; index: number };
 
-export const activeScene = (scenes: SceneDef[], frame: number): ActiveScene => {
+export const activeScene = (scenes: SceneDef[], frame: number, TL: Timeline): ActiveScene => {
   let index = TL.scenes.findIndex((s) => frame >= s.fromFrame && frame < s.toFrame);
   if (index < 0) index = TL.scenes.length - 1;
   const s = TL.scenes[index];
@@ -23,7 +23,7 @@ export const activeScene = (scenes: SceneDef[], frame: number): ActiveScene => {
 };
 
 // Signed whip amount around scene cuts: ramps to +-1 at the cut, 0 elsewhere
-export const whipAmount = (scenes: SceneDef[], frame: number): number => {
+export const whipAmount = (scenes: SceneDef[], frame: number, TL: Timeline): number => {
   for (let i = 0; i < TL.scenes.length - 1; i++) {
     if (scenes[i].out !== "whip") continue;
     const cut = TL.scenes[i].toFrame;
@@ -38,7 +38,7 @@ export const whipAmount = (scenes: SceneDef[], frame: number): number => {
 };
 
 // Fly-by window around a cut (Tuti crosses close to the lens)
-export const flybyAmount = (scenes: SceneDef[], frame: number): number | null => {
+export const flybyAmount = (scenes: SceneDef[], frame: number, TL: Timeline): number | null => {
   for (let i = 0; i < TL.scenes.length - 1; i++) {
     if (scenes[i].out !== "flyby") continue;
     const cut = TL.scenes[i].toFrame;
@@ -65,18 +65,18 @@ const applyWhip = (shot: CamShot, whip: number): CamShot => {
 
 export type PerfFlags = { noKampung?: boolean; noShadows?: boolean; noEnv?: boolean; noAA?: boolean };
 
-export const SceneWorld: React.FC<{ scenes: SceneDef[]; frame: number; lockCamera?: number | null; freezeAt?: number | null; perf?: PerfFlags }> = ({ scenes, frame, lockCamera = null, freezeAt = null, perf = {} }) => {
+export const SceneWorld: React.FC<{ tl: Timeline; scenes: SceneDef[]; frame: number; lockCamera?: number | null; freezeAt?: number | null; perf?: PerfFlags; world?: React.ReactNode }> = ({ tl, scenes, frame, lockCamera = null, freezeAt = null, perf = {}, world }) => {
   // Flicker tests can freeze all scene animation (content) independently of the camera
   const contentFrame = freezeAt ?? frame;
-  const { def, ctx } = activeScene(scenes, contentFrame);
+  const { def, ctx } = activeScene(scenes, contentFrame, tl);
   // Flicker tests can pin the camera to one frame while the scene keeps animating
   const camFrame = lockCamera ?? frame;
   const base = def.camera({ ...ctx, frame: camFrame });
   // Subtle deterministic handheld on every shot
   const hh = handheld(camFrame, 1, ctx.from % 7);
   const shot0: CamShot = { ...base, pos: [base.pos[0] + hh[0], base.pos[1] + hh[1], base.pos[2] + hh[2]] };
-  const shot = applyWhip(shot0, whipAmount(scenes, camFrame));
-  const fly = flybyAmount(scenes, contentFrame);
+  const shot = applyWhip(shot0, whipAmount(scenes, camFrame, tl));
+  const fly = flybyAmount(scenes, contentFrame, tl);
   let flyPos: [number, number, number] | null = null;
   let flyRot = 0;
   if (fly !== null) {
@@ -94,7 +94,7 @@ export const SceneWorld: React.FC<{ scenes: SceneDef[]; frame: number; lockCamer
       <Sky mood={def.mood} frame={contentFrame} />
       {!perf.noKampung && (
         <StaticBatch name="kampung">
-          <Kampung />
+          {world ?? <Kampung />}
         </StaticBatch>
       )}
       <def.Set ctx={ctx} />

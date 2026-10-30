@@ -35,6 +35,9 @@ export const POSES = {
   compare: { armL: [-1.0, -0.2, 0.3], armR: [-1.6, 0.3, -0.2], elbowL: 0.4, elbowR: 0.1, legL: 0, legR: 0, kneeL: 0, kneeR: 0, torso: [0.05, 0.15, 0], head: [-0.15, 0.2, 0], lift: 0 },
   thumbsUpHold: { armL: [-0.95, 0.35, 0.15], armR: [-1.1, 0.3, -0.25], elbowL: 0.95, elbowR: 1.25, legL: 0, legR: 0, kneeL: 0, kneeR: 0, torso: [0, 0, 0.04], head: [0, 0, 0.06], lift: 0 },
   holdCal: { armL: [-0.95, 0.35, 0.15], armR: [0.05, 0, -0.2], elbowL: 0.95, elbowR: 0.25, legL: 0, legR: 0, kneeL: 0, kneeR: 0, torso: [0, 0, 0], head: [0.12, 0, 0], lift: 0 },
+  phoneEar: { armL: [0.05, 0, 0.18], armR: [-0.762, 1.22, -2.17], elbowL: 0.25, elbowR: 0.846, legL: 0, legR: 0, kneeL: 0, kneeR: 0, torso: [0, 0, 0.04], head: [0, -0.15, 0.12], lift: 0 },
+  phoneUp: { armL: [0.05, 0, 0.3], armR: [-2.95, 0, -0.25], elbowL: 0.25, elbowR: 0.2, legL: 0, legR: 0, kneeL: 0, kneeR: 0, torso: [-0.06, 0, 0.06], head: [-0.35, 0, 0], lift: 0.04 },
+  phoneLook: { armL: [-0.6, 0.3, 0.2], armR: [-1.05, -0.35, -0.2], elbowL: 0.9, elbowR: 1.0, legL: 0, legR: 0, kneeL: 0, kneeR: 0, torso: [0.08, 0, 0], head: [0.3, 0, 0], lift: 0 },
   nod: { armL: [0.05, 0, 0.18], armR: [0.05, 0, -0.18], elbowL: 0.25, elbowR: 0.25, legL: 0, legR: 0, kneeL: 0, kneeR: 0, torso: [0.05, 0, 0], head: [0.25, 0, 0], lift: 0 },
   place: { armL: [-1.3, 0.25, 0.1], armR: [-1.3, -0.25, -0.1], elbowL: 0.35, elbowR: 0.35, legL: 0, legR: 0, kneeL: 0, kneeR: 0, torso: [0.3, 0, 0], head: [0.25, 0, 0], lift: -0.03 },
 } satisfies Record<string, Pose>;

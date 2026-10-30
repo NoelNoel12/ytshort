@@ -1,0 +1,598 @@
+{
+ "videoId": "short-04",
+ "source": "skrip-short-04-sinyal-lift.md",
+ "meta": {
+  "Channel": "Noel Menjawab",
+  "Judul YouTube": "Kenapa Sinyal HP Hilang di Dalam Lift? #shorts",
+  "Jumlah kata VO": "184 kata",
+  "Target durasi": "sekitar 82 detik (tempo nyata sekitar 2,25 kata per detik, batas keras 90 detik)",
+  "Format": "Bangun dari nol: kamu bikin lift dari logam, tiap perbaikan melahirkan masalah baru",
+  "Gaya visual": "3D stylized setara howcomeid (low poly tapi tidak terlalu low, grafik bersih dan berkelas), maket gedung dan kampung yang hidup, satu tukang dan satu burung sebagai pemanis lucu",
+  "Tayang disarankan": "07.30 WIB atau 17.00 sampai 18.00 WIB"
+ },
+ "cast": [
+  {
+   "name": "Pak Dodi",
+   "role": "Orang yang telepon di lift, mewakili \"kamu\""
+  },
+  {
+   "name": "Tuti",
+   "role": "Merpati pemanis lucu, menangkis gelombang dan pura-pura jadi hantu"
+  },
+  {
+   "name": "Lift, antena, kabel",
+   "role": "Benda mati tanpa wajah, tanpa logo atau merek asli"
+  }
+ ],
+ "scenes": [
+  {
+   "id": "S1",
+   "index": 0,
+   "title": "Hook, kotak logam",
+   "type": "hook",
+   "durationHintSec": 12,
+   "vo": "Kenapa sinyal HP hilang di dalam lift? Kalau kamu bikin lift dari logam, kamu sudah punya kotak yang kuat. Tapi kotak itu juga bikin sinyal susah masuk.",
+   "screenText": [
+    {
+     "raw": "Kenapa sinyal HP",
+     "plain": "Kenapa sinyal HP",
+     "star": "",
+     "segments": [
+      {
+       "text": "Kenapa sinyal HP",
+       "highlight": false
+      }
+     ]
+    },
+    {
+     "raw": "*HILANG DI LIFT?*",
+     "plain": "HILANG DI LIFT?",
+     "star": "HILANG DI LIFT?",
+     "segments": [
+      {
+       "text": "HILANG DI LIFT?",
+       "highlight": true
+      }
+     ]
+    }
+   ],
+   "actions": [
+    {
+     "trigger": "kotak yang kuat",
+     "description": "Lift logam mengilap turun dari atas menempati poros gedung maket dengan bunyi klang, Tuti terkejut dan terbang menjauh."
+    },
+    {
+     "trigger": "sinyal HP",
+     "description": "Menara sinyal kecil di atap gedung memancarkan cincin gelombang berwarna cerah ke arah lift."
+    },
+    {
+     "trigger": "susah masuk",
+     "description": "Cincin gelombang memantul dari dinding lift seperti bola karet, Tuti menangkis satu cincin dengan sayapnya."
+    }
+   ],
+   "visual": "Gedung bertingkat maket dengan penampang poros lift, langit biru berawan, menara sinyal generik di atap, jalan kampung di bawah. Kamera dolly in lalu punch-in ke dinding lift."
+  },
+  {
+   "id": "S2",
+   "index": 1,
+   "title": "Pak Dodi telepon di lift",
+   "type": "call",
+   "durationHintSec": 8.9,
+   "vo": "Jadi Pak Dodi masuk lift sambil telepon. Di lobi sinyalnya penuh, begitu pintu tertutup sinyalnya melemah, dan teleponnya bisa putus.",
+   "screenText": [
+    {
+     "raw": "Di lobi: sinyal *penuh*",
+     "plain": "Di lobi: sinyal penuh",
+     "star": "penuh",
+     "segments": [
+      {
+       "text": "Di lobi: sinyal ",
+       "highlight": false
+      },
+      {
+       "text": "penuh",
+       "highlight": true
+      }
+     ]
+    },
+    {
+     "raw": "Pintu tertutup: sinyal *melemah*",
+     "plain": "Pintu tertutup: sinyal melemah",
+     "star": "melemah",
+     "segments": [
+      {
+       "text": "Pintu tertutup: sinyal ",
+       "highlight": false
+      },
+      {
+       "text": "melemah",
+       "highlight": true
+      }
+     ]
+    },
+    {
+     "raw": "Telepon *putus*",
+     "plain": "Telepon putus",
+     "star": "putus",
+     "segments": [
+      {
+       "text": "Telepon ",
+       "highlight": false
+      },
+      {
+       "text": "putus",
+       "highlight": true
+      }
+     ]
+    }
+   ],
+   "actions": [
+    {
+     "trigger": "masuk lift",
+     "description": "Pak Dodi masuk kabin dengan HP di telinga, bar sinyal di layar HP menyala penuh."
+    },
+    {
+     "trigger": "pintu tertutup",
+     "description": "Pintu lift menutup dengan bunyi ding, bar sinyal turun satu per satu."
+    },
+    {
+     "trigger": "teleponnya bisa putus",
+     "description": "Ikon telepon di atas kepala Pak Dodi berubah jadi tanda silang kecil, Pak Dodi mengangkat HP tinggi-tinggi seperti mencari sinyal."
+    }
+   ],
+   "visual": "Penampang kabin lift dengan Pak Dodi di dalam, HP generik tanpa merek, bar sinyal 3D di atas kepalanya, cahaya kabin hangat. Kamera tracking dari luar lalu close-up bar sinyal."
+  },
+  {
+   "id": "S3",
+   "index": 2,
+   "title": "Gelombang menabrak logam",
+   "type": "conductor",
+   "durationHintSec": 9.8,
+   "vo": "Tapi kenapa? Logam itu penghantar. Gelombang sinyal yang menabrak dindingnya menggeser muatan listrik di logam, dan itu melemahkan gelombang di dalam kotak.",
+   "screenText": [
+    {
+     "raw": "Logam = *penghantar*",
+     "plain": "Logam = penghantar",
+     "star": "penghantar",
+     "segments": [
+      {
+       "text": "Logam = ",
+       "highlight": false
+      },
+      {
+       "text": "penghantar",
+       "highlight": true
+      }
+     ]
+    },
+    {
+     "raw": "Muatan *bergeser*",
+     "plain": "Muatan bergeser",
+     "star": "bergeser",
+     "segments": [
+      {
+       "text": "Muatan ",
+       "highlight": false
+      },
+      {
+       "text": "bergeser",
+       "highlight": true
+      }
+     ]
+    },
+    {
+     "raw": "Gelombang di dalam *melemah*",
+     "plain": "Gelombang di dalam melemah",
+     "star": "melemah",
+     "segments": [
+      {
+       "text": "Gelombang di dalam ",
+       "highlight": false
+      },
+      {
+       "text": "melemah",
+       "highlight": true
+      }
+     ]
+    }
+   ],
+   "actions": [
+    {
+     "trigger": "penghantar",
+     "description": "Dinding lift berkilau, partikel kecil bermuatan bergerak di permukaan seperti kerumunan semut."
+    },
+    {
+     "trigger": "menabrak dindingnya",
+     "description": "Cincin gelombang menghantam dinding dan partikel bergeser ke satu sisi dengan efek riak."
+    },
+    {
+     "trigger": "melemahkan gelombang",
+     "description": "Cincin gelombang di dalam kabin menipis dan memudar, Pak Dodi menatap cincin pudar itu dengan bingung."
+    }
+   ],
+   "visual": "Penampang dinding lift sebagai panggung besar, partikel muatan sebagai bola kecil bercahaya, gelombang sebagai cincin transparan. Kamera push-in ke dinding lalu orbit di dalam kabin."
+  },
+  {
+   "id": "S4",
+   "index": 3,
+   "title": "Namanya sangkar Faraday",
+   "type": "faraday",
+   "durationHintSec": 8,
+   "vo": "Namanya efek sangkar Faraday. Dia nggak nahan sinyal dengan sempurna, tapi cukup bikin sinyal di dalam jauh melemah.",
+   "screenText": [
+    {
+     "raw": "Namanya *sangkar Faraday*",
+     "plain": "Namanya sangkar Faraday",
+     "star": "sangkar Faraday",
+     "segments": [
+      {
+       "text": "Namanya ",
+       "highlight": false
+      },
+      {
+       "text": "sangkar Faraday",
+       "highlight": true
+      }
+     ]
+    },
+    {
+     "raw": "Nggak sempurna, tapi *jauh melemah*",
+     "plain": "Nggak sempurna, tapi jauh melemah",
+     "star": "jauh melemah",
+     "segments": [
+      {
+       "text": "Nggak sempurna, tapi ",
+       "highlight": false
+      },
+      {
+       "text": "jauh melemah",
+       "highlight": true
+      }
+     ]
+    }
+   ],
+   "actions": [
+    {
+     "trigger": "sangkar Faraday",
+     "description": "Kerangka lift berubah jadi sangkar kisi tembus pandang dengan label SANGKAR FARADAY yang muncul dengan efek pop."
+    },
+    {
+     "trigger": "nggak nahan sinyal dengan sempurna",
+     "description": "Satu cincin gelombang tipis lolos lewat celah pintu dan memudar di dalam, Tuti menunjuknya."
+    },
+    {
+     "trigger": "jauh melemah",
+     "description": "Bar sinyal di kepala Pak Dodi tinggal satu batang yang bergetar."
+    }
+   ],
+   "visual": "Kabin lift sebagai kotak kisi tembus pandang, label kayu besar, satu cincin tipis lolos di celah pintu. Cahaya sedikit redup. Kamera whip ke celah pintu lalu pull-out."
+  },
+  {
+   "id": "S5",
+   "index": 4,
+   "title": "Bikin sinyal baru di dalam",
+   "type": "repeater",
+   "durationHintSec": 9.8,
+   "vo": "Jadi caranya, bikin sinyal baru di dalam kotaknya. Antena di luar menangkap sinyal, kabelnya masuk, lalu antena kecil di dalam yang menyebarkannya.",
+   "screenText": [
+    {
+     "raw": "Antena *luar* menangkap",
+     "plain": "Antena luar menangkap",
+     "star": "luar",
+     "segments": [
+      {
+       "text": "Antena ",
+       "highlight": false
+      },
+      {
+       "text": "luar",
+       "highlight": true
+      },
+      {
+       "text": " menangkap",
+       "highlight": false
+      }
+     ]
+    },
+    {
+     "raw": "Kabel *masuk*",
+     "plain": "Kabel masuk",
+     "star": "masuk",
+     "segments": [
+      {
+       "text": "Kabel ",
+       "highlight": false
+      },
+      {
+       "text": "masuk",
+       "highlight": true
+      }
+     ]
+    },
+    {
+     "raw": "Antena *dalam* menyebarkan",
+     "plain": "Antena dalam menyebarkan",
+     "star": "dalam",
+     "segments": [
+      {
+       "text": "Antena ",
+       "highlight": false
+      },
+      {
+       "text": "dalam",
+       "highlight": true
+      },
+      {
+       "text": " menyebarkan",
+       "highlight": false
+      }
+     ]
+    }
+   ],
+   "actions": [
+    {
+     "trigger": "antena di luar",
+     "description": "Antena panjang di atap gedung berputar menangkap cincin gelombang dari menara."
+    },
+    {
+     "trigger": "kabelnya masuk",
+     "description": "Kabel oranye merayap turun menembus dinding gedung dan masuk ke poros lift, Tuti mengikuti kabel itu terbang turun."
+    },
+    {
+     "trigger": "antena kecil di dalam",
+     "description": "Antena mungil menyala di langit-langit kabin dan menebar cincin baru, bar sinyal Pak Dodi naik penuh."
+    }
+   ],
+   "visual": "Penampang gedung dari atap sampai poros lift, antena atap, kabel oranye berkilau, antena kecil di kabin. Kamera tracking vertikal mengikuti kabel dari atap ke kabin."
+  },
+  {
+   "id": "S6",
+   "index": 5,
+   "title": "Lift bergerak",
+   "type": "shaft",
+   "durationHintSec": 7.1,
+   "vo": "Tapi lift itu bergerak naik turun, jadi antenanya bisa dipasang di poros lift, bukan ikut kabin.",
+   "screenText": [
+    {
+     "raw": "Lift *bergerak*",
+     "plain": "Lift bergerak",
+     "star": "bergerak",
+     "segments": [
+      {
+       "text": "Lift ",
+       "highlight": false
+      },
+      {
+       "text": "bergerak",
+       "highlight": true
+      }
+     ]
+    },
+    {
+     "raw": "Antena di *poros lift*",
+     "plain": "Antena di poros lift",
+     "star": "poros lift",
+     "segments": [
+      {
+       "text": "Antena di ",
+       "highlight": false
+      },
+      {
+       "text": "poros lift",
+       "highlight": true
+      }
+     ]
+    }
+   ],
+   "actions": [
+    {
+     "trigger": "bergerak naik turun",
+     "description": "Kabin lift naik turun cepat, Pak Dodi dan Tuti ikut terlempar ke langit-langit dan lantai."
+    },
+    {
+     "trigger": "poros lift",
+     "description": "Antena kecil menempel di dinding poros dan tetap diam saat kabin lewat."
+    },
+    {
+     "trigger": "bukan ikut kabin",
+     "description": "Kabin melewati antena itu dan bar sinyal Pak Dodi tetap penuh."
+    }
+   ],
+   "visual": "Poros lift vertikal panjang dengan kabin naik turun, antena menempel di dinding poros, cahaya sore keemasan. Kamera tracking vertikal cepat dengan goyangan halus."
+  },
+  {
+   "id": "S7",
+   "index": 6,
+   "title": "Jujur, tergantung gedung",
+   "type": "nuance",
+   "durationHintSec": 7.1,
+   "vo": "Tapi jujur aja, nggak semua lift sinyalnya langsung mati. Tergantung bahan dan penguat sinyal di gedungnya.",
+   "screenText": [
+    {
+     "raw": "Nggak semua lift *langsung mati*",
+     "plain": "Nggak semua lift langsung mati",
+     "star": "langsung mati",
+     "segments": [
+      {
+       "text": "Nggak semua lift ",
+       "highlight": false
+      },
+      {
+       "text": "langsung mati",
+       "highlight": true
+      }
+     ]
+    },
+    {
+     "raw": "Tergantung *bahan* dan *penguat sinyal*",
+     "plain": "Tergantung bahan dan penguat sinyal",
+     "star": "bahan penguat sinyal",
+     "segments": [
+      {
+       "text": "Tergantung ",
+       "highlight": false
+      },
+      {
+       "text": "bahan",
+       "highlight": true
+      },
+      {
+       "text": " dan ",
+       "highlight": false
+      },
+      {
+       "text": "penguat sinyal",
+       "highlight": true
+      }
+     ]
+    }
+   ],
+   "actions": [
+    {
+     "trigger": "nggak semua lift",
+     "description": "Dua gedung maket kecil berdampingan, lift satu bersinyal penuh dan lift sebelahnya bersinyal lemah."
+    },
+    {
+     "trigger": "tergantung bahan",
+     "description": "Papan kecil bertuliskan BAHAN muncul di antara dua lift."
+    },
+    {
+     "trigger": "penguat sinyal",
+     "description": "Kotak penguat sinyal kecil berkedip di gedung yang bersinyal penuh, Tuti mengangguk."
+    }
+   ],
+   "visual": "Dua gedung maket berdampingan di jalan kampung, papan kecil, kotak penguat sinyal generik. Cahaya sore keemasan. Kamera orbit pelan lalu close-up kotak penguat."
+  },
+  {
+   "id": "S8",
+   "index": 7,
+   "title": "Tips telepon sebelum lift",
+   "type": "tips",
+   "durationHintSec": 8.4,
+   "vo": "Jadi kalau lagi penting, selesaikan teleponnya sebelum masuk lift. Atau kasih tahu dulu lawan bicaramu, biar nggak dikira ngilang.",
+   "screenText": [
+    {
+     "raw": "Penting? *Selesaikan dulu* sebelum masuk",
+     "plain": "Penting? Selesaikan dulu sebelum masuk",
+     "star": "Selesaikan dulu",
+     "segments": [
+      {
+       "text": "Penting? ",
+       "highlight": false
+      },
+      {
+       "text": "Selesaikan dulu",
+       "highlight": true
+      },
+      {
+       "text": " sebelum masuk",
+       "highlight": false
+      }
+     ]
+    },
+    {
+     "raw": "Atau *kasih tahu* lawan bicara",
+     "plain": "Atau kasih tahu lawan bicara",
+     "star": "kasih tahu",
+     "segments": [
+      {
+       "text": "Atau ",
+       "highlight": false
+      },
+      {
+       "text": "kasih tahu",
+       "highlight": true
+      },
+      {
+       "text": " lawan bicara",
+       "highlight": false
+      }
+     ]
+    }
+   ],
+   "actions": [
+    {
+     "trigger": "selesaikan teleponnya",
+     "description": "Pak Dodi berdiri di depan pintu lift sambil menutup telepon dengan gaya rapi."
+    },
+    {
+     "trigger": "kasih tahu",
+     "description": "Balon dialog bertuliskan SEBENTAR YA muncul di atas kepala Pak Dodi."
+    },
+    {
+     "trigger": "dikira ngilang",
+     "description": "Tuti berpura-pura jadi hantu putih kecil yang menghilang di balik pintu lift."
+    }
+   ],
+   "visual": "Depan lift lobi gedung maket, balon dialog 3D, Tuti berselimut kain putih. Cahaya hangat. Kamera push-in ke Pak Dodi lalu whip ke pintu lift."
+  },
+  {
+   "id": "S9",
+   "index": 8,
+   "title": "Penutup dan ajakan komentar",
+   "type": "cta",
+   "durationHintSec": 10.7,
+   "vo": "Nah, itu jawabannya. Sinyal melemah karena kotak logam lift bekerja seperti sangkar Faraday. Pertanyaan berikutnya kamu yang pilih. Tulis di komentar, nanti Noel Menjawab.",
+   "screenText": [
+    {
+     "raw": "Lift logam = *sangkar Faraday*",
+     "plain": "Lift logam = sangkar Faraday",
+     "star": "sangkar Faraday",
+     "segments": [
+      {
+       "text": "Lift logam = ",
+       "highlight": false
+      },
+      {
+       "text": "sangkar Faraday",
+       "highlight": true
+      }
+     ]
+    },
+    {
+     "raw": "Pertanyaan berikutnya *kamu yang pilih*",
+     "plain": "Pertanyaan berikutnya kamu yang pilih",
+     "star": "kamu yang pilih",
+     "segments": [
+      {
+       "text": "Pertanyaan berikutnya ",
+       "highlight": false
+      },
+      {
+       "text": "kamu yang pilih",
+       "highlight": true
+      }
+     ]
+    },
+    {
+     "raw": "*Noel Menjawab*",
+     "plain": "Noel Menjawab",
+     "star": "Noel Menjawab",
+     "segments": [
+      {
+       "text": "Noel Menjawab",
+       "highlight": true
+      }
+     ]
+    }
+   ],
+   "actions": [
+    {
+     "trigger": "jawabannya",
+     "description": "Label SANGKAR FARADAY berputar jadi kartu jawaban dengan tanda centang."
+    },
+    {
+     "trigger": "kamu yang pilih",
+     "description": "Balon komentar 3D muncul beruntun di langit kampung, Pak Dodi dan Tuti menunjuk ke arah penonton."
+    },
+    {
+     "trigger": "Noel Menjawab",
+     "description": "End card teks Noel Menjawab turun dari atas dengan bunyi pop, kamera mundur panjang."
+    }
+   ],
+   "visual": "Jalan kampung sore keemasan, langit gradasi, balon komentar melayang, kamera pull-out panjang ke langit dengan end card."
+  }
+ ],
+ "voText": "Kenapa sinyal HP hilang di dalam lift? Kalau kamu bikin lift dari logam, kamu sudah punya kotak yang kuat. Tapi kotak itu juga bikin sinyal susah masuk. Jadi Pak Dodi masuk lift sambil telepon. Di lobi sinyalnya penuh, begitu pintu tertutup sinyalnya melemah, dan teleponnya bisa putus. Tapi kenapa? Logam itu penghantar. Gelombang sinyal yang menabrak dindingnya menggeser muatan listrik di logam, dan itu melemahkan gelombang di dalam kotak. Namanya efek sangkar Faraday. Dia nggak nahan sinyal dengan sempurna, tapi cukup bikin sinyal di dalam jauh melemah. Jadi caranya, bikin sinyal baru di dalam kotaknya. Antena di luar menangkap sinyal, kabelnya masuk, lalu antena kecil di dalam yang menyebarkannya. Tapi lift itu bergerak naik turun, jadi antenanya bisa dipasang di poros lift, bukan ikut kabin. Tapi jujur aja, nggak semua lift sinyalnya langsung mati. Tergantung bahan dan penguat sinyal di gedungnya. Jadi kalau lagi penting, selesaikan teleponnya sebelum masuk lift. Atau kasih tahu dulu lawan bicaramu, biar nggak dikira ngilang. Nah, itu jawabannya. Sinyal melemah karena kotak logam lift bekerja seperti sangkar Faraday. Pertanyaan berikutnya kamu yang pilih. Tulis di komentar, nanti Noel Menjawab.",
+ "voWordCount": 184
+}

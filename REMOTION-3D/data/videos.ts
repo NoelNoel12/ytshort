@@ -15,6 +15,8 @@ export type VideoConfig = {
   sceneTypeMap: Record<string, SceneType>;
   // Optional override: chip key "S3-2" -> phrase in VO to anchor the label on
   labelAnchors?: Record<string, string>;
+  sceneDir: string; // src/scenes/<sceneDir>, checked by verifySync for cue("Sx", k) wiring
+  numbers: "finance" | "none"; // on-screen number policy checked by checkFinance
 };
 
 export const VIDEOS: Record<string, VideoConfig> = {
@@ -45,6 +47,32 @@ export const VIDEOS: Record<string, VideoConfig> = {
       // "Jangan bandingin flat vs efektif" lands on "dibandingin langsung"
       "S7-2": "dibandingin langsung",
     },
+    sceneDir: "short02",
+    numbers: "finance",
+  },
+  "short-04": {
+    id: "short-04",
+    compositionId: "Short04",
+    script: "skrip-short-04-sinyal-lift.md",
+    sourceAudio: "AUDIO/30 Oktober 2026/Sinyal Lift.mp3",
+    publicAudio: "audio/short-04.wav",
+    output: "FINAL OUTPUT/30 Oktober 2026/Kenapa sinyal HP hilang di lift (3D v1).mp4",
+    fps: 30,
+    tailSec: 0.8,
+    maxVoSec: 89.5,
+    sceneTypeMap: {
+      S1: "hook",
+      S2: "call",
+      S3: "conductor",
+      S4: "faraday",
+      S5: "repeater",
+      S6: "shaft",
+      S7: "nuance",
+      S8: "tips",
+      S9: "cta",
+    },
+    sceneDir: "short04",
+    numbers: "none",
   },
 };
 

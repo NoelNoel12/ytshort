@@ -1,0 +1,1240 @@
+{
+ "model": "/home/user/ytshort/REMOTION-3D/tools/whisper-small-ct2",
+ "language": "id",
+ "duration": 82.8343125,
+ "elapsedSec": 44.6,
+ "segments": [
+  {
+   "start": 0.0,
+   "end": 2.28,
+   "text": "Kenapa sinyal HP hilang di dalam lift?"
+  },
+  {
+   "start": 2.94,
+   "end": 6.78,
+   "text": "Kalau kamu bikin lift dari logam, kamu sudah punya kotak yang kuat."
+  },
+  {
+   "start": 7.2,
+   "end": 10.0,
+   "text": "Tapi kotak itu juga bikin sinyal susah masuk."
+  },
+  {
+   "start": 10.58,
+   "end": 12.94,
+   "text": "Jadi, Pak Dodi masuk lift sambil telefon."
+  },
+  {
+   "start": 13.6,
+   "end": 14.96,
+   "text": "Di lobby, sinyalnya penuh."
+  },
+  {
+   "start": 15.36,
+   "end": 19.68,
+   "text": "Begitu pintu tertutup, sinyalnya melemah, dan telefonnya bisa putus."
+  },
+  {
+   "start": 20.04,
+   "end": 22.78,
+   "text": "Tapi kenapa? Logam itu penghantar."
+  },
+  {
+   "start": 23.34,
+   "end": 27.32,
+   "text": "Gelombang sinyal yang menabrak dindingnya menggeser muatan listrik di logam,"
+  },
+  {
+   "start": 27.32,
+   "end": 30.22,
+   "text": "dan itu melemahkan gelombang di dalam kotak."
+  },
+  {
+   "start": 30.52,
+   "end": 32.76,
+   "text": "Namanya Effek Sankar Faraday."
+  },
+  {
+   "start": 32.96,
+   "end": 38.26,
+   "text": "Dia nggak nahan sinyal dengan sempurna, tapi cukup bikin sinyal di dalam jauh melemah."
+  },
+  {
+   "start": 38.62,
+   "end": 41.84,
+   "text": "Jadi caranya, bikin sinyal baru di dalam kotaknya."
+  },
+  {
+   "start": 42.3,
+   "end": 44.02,
+   "text": "Antena di luar menangkap sinyal."
+  },
+  {
+   "start": 44.42,
+   "end": 48.22,
+   "text": "Kabelnya masuk, lalu antena kecil di dalam yang menyebarkannya."
+  },
+  {
+   "start": 48.6,
+   "end": 50.8,
+   "text": "Tapi lift itu bergerak naik turun."
+  },
+  {
+   "start": 51.12,
+   "end": 54.92,
+   "text": "Jadi antenanya bisa dipasang di poros lift, bukan ikut kabin."
+  },
+  {
+   "start": 55.480000000000004,
+   "end": 58.84,
+   "text": "Tapi jujur aja, nggak semua lift sinyalnya langsung mati."
+  },
+  {
+   "start": 59.24,
+   "end": 61.7,
+   "text": "Tergantung bahan dan penguat sinyal di gedungnya."
+  },
+  {
+   "start": 62.12,
+   "end": 66.2,
+   "text": "Jadi kalau lagi penting, selesaikan telefonnya sebelum masuk lift."
+  },
+  {
+   "start": 66.54,
+   "end": 70.24,
+   "text": "Atau kasih tahu dulu lawan bicara mu, biar nggak dikira ngilang."
+  },
+  {
+   "start": 70.82,
+   "end": 72.34,
+   "text": "Nah, itu jawabannya."
+  },
+  {
+   "start": 72.86,
+   "end": 77.12,
+   "text": "Sinyal melemah karena kotak logam lift bekerja seperti Sankar Faraday."
+  },
+  {
+   "start": 77.46,
+   "end": 79.68,
+   "text": "Pertanyaan berikutnya kamu yang pilih."
+  },
+  {
+   "start": 79.9,
+   "end": 82.48,
+   "text": "Tulis di komentar, nanti Noel menjawab."
+  }
+ ],
+ "words": [
+  {
+   "text": "Kenapa",
+   "start": 0.0,
+   "end": 0.4,
+   "prob": 0.798
+  },
+  {
+   "text": "sinyal",
+   "start": 0.4,
+   "end": 0.74,
+   "prob": 0.908
+  },
+  {
+   "text": "HP",
+   "start": 0.74,
+   "end": 1.12,
+   "prob": 0.882
+  },
+  {
+   "text": "hilang",
+   "start": 1.12,
+   "end": 1.64,
+   "prob": 0.993
+  },
+  {
+   "text": "di",
+   "start": 1.64,
+   "end": 1.8,
+   "prob": 0.839
+  },
+  {
+   "text": "dalam",
+   "start": 1.8,
+   "end": 2.0,
+   "prob": 0.984
+  },
+  {
+   "text": "lift?",
+   "start": 2.0,
+   "end": 2.28,
+   "prob": 0.446
+  },
+  {
+   "text": "Kalau",
+   "start": 2.94,
+   "end": 3.16,
+   "prob": 0.694
+  },
+  {
+   "text": "kamu",
+   "start": 3.16,
+   "end": 3.42,
+   "prob": 0.986
+  },
+  {
+   "text": "bikin",
+   "start": 3.42,
+   "end": 3.74,
+   "prob": 0.983
+  },
+  {
+   "text": "lift",
+   "start": 3.74,
+   "end": 3.9,
+   "prob": 0.982
+  },
+  {
+   "text": "dari",
+   "start": 3.9,
+   "end": 4.18,
+   "prob": 0.998
+  },
+  {
+   "text": "logam,",
+   "start": 4.18,
+   "end": 4.7,
+   "prob": 0.679
+  },
+  {
+   "text": "kamu",
+   "start": 4.94,
+   "end": 5.24,
+   "prob": 0.958
+  },
+  {
+   "text": "sudah",
+   "start": 5.24,
+   "end": 5.46,
+   "prob": 0.988
+  },
+  {
+   "text": "punya",
+   "start": 5.46,
+   "end": 5.76,
+   "prob": 0.995
+  },
+  {
+   "text": "kotak",
+   "start": 5.76,
+   "end": 6.24,
+   "prob": 0.993
+  },
+  {
+   "text": "yang",
+   "start": 6.24,
+   "end": 6.38,
+   "prob": 0.993
+  },
+  {
+   "text": "kuat.",
+   "start": 6.38,
+   "end": 6.78,
+   "prob": 0.997
+  },
+  {
+   "text": "Tapi",
+   "start": 7.2,
+   "end": 7.68,
+   "prob": 0.985
+  },
+  {
+   "text": "kotak",
+   "start": 7.68,
+   "end": 8.1,
+   "prob": 0.834
+  },
+  {
+   "text": "itu",
+   "start": 8.1,
+   "end": 8.32,
+   "prob": 0.993
+  },
+  {
+   "text": "juga",
+   "start": 8.32,
+   "end": 8.58,
+   "prob": 0.974
+  },
+  {
+   "text": "bikin",
+   "start": 8.58,
+   "end": 8.92,
+   "prob": 0.989
+  },
+  {
+   "text": "sinyal",
+   "start": 8.92,
+   "end": 9.32,
+   "prob": 0.934
+  },
+  {
+   "text": "susah",
+   "start": 9.32,
+   "end": 9.62,
+   "prob": 0.989
+  },
+  {
+   "text": "masuk.",
+   "start": 9.62,
+   "end": 10.0,
+   "prob": 0.996
+  },
+  {
+   "text": "Jadi,",
+   "start": 10.58,
+   "end": 10.96,
+   "prob": 0.973
+  },
+  {
+   "text": "Pak",
+   "start": 11.16,
+   "end": 11.26,
+   "prob": 0.833
+  },
+  {
+   "text": "Dodi",
+   "start": 11.26,
+   "end": 11.58,
+   "prob": 0.804
+  },
+  {
+   "text": "masuk",
+   "start": 11.58,
+   "end": 11.82,
+   "prob": 0.997
+  },
+  {
+   "text": "lift",
+   "start": 11.82,
+   "end": 12.18,
+   "prob": 0.949
+  },
+  {
+   "text": "sambil",
+   "start": 12.18,
+   "end": 12.58,
+   "prob": 0.965
+  },
+  {
+   "text": "telefon.",
+   "start": 12.58,
+   "end": 12.94,
+   "prob": 0.381
+  },
+  {
+   "text": "Di",
+   "start": 13.6,
+   "end": 13.74,
+   "prob": 0.497
+  },
+  {
+   "text": "lobby,",
+   "start": 13.74,
+   "end": 14.0,
+   "prob": 0.774
+  },
+  {
+   "text": "sinyalnya",
+   "start": 14.22,
+   "end": 14.6,
+   "prob": 0.975
+  },
+  {
+   "text": "penuh.",
+   "start": 14.6,
+   "end": 14.96,
+   "prob": 0.983
+  },
+  {
+   "text": "Begitu",
+   "start": 15.36,
+   "end": 15.74,
+   "prob": 0.961
+  },
+  {
+   "text": "pintu",
+   "start": 15.74,
+   "end": 16.0,
+   "prob": 0.993
+  },
+  {
+   "text": "tertutup,",
+   "start": 16.0,
+   "end": 16.54,
+   "prob": 0.997
+  },
+  {
+   "text": "sinyalnya",
+   "start": 16.84,
+   "end": 17.3,
+   "prob": 0.98
+  },
+  {
+   "text": "melemah,",
+   "start": 17.3,
+   "end": 17.76,
+   "prob": 0.933
+  },
+  {
+   "text": "dan",
+   "start": 17.96,
+   "end": 18.36,
+   "prob": 0.984
+  },
+  {
+   "text": "telefonnya",
+   "start": 18.36,
+   "end": 18.92,
+   "prob": 0.635
+  },
+  {
+   "text": "bisa",
+   "start": 18.92,
+   "end": 19.1,
+   "prob": 0.994
+  },
+  {
+   "text": "putus.",
+   "start": 19.1,
+   "end": 19.68,
+   "prob": 0.975
+  },
+  {
+   "text": "Tapi",
+   "start": 20.04,
+   "end": 20.36,
+   "prob": 0.987
+  },
+  {
+   "text": "kenapa?",
+   "start": 20.36,
+   "end": 20.78,
+   "prob": 0.993
+  },
+  {
+   "text": "Logam",
+   "start": 21.38,
+   "end": 21.82,
+   "prob": 0.985
+  },
+  {
+   "text": "itu",
+   "start": 21.82,
+   "end": 22.06,
+   "prob": 0.994
+  },
+  {
+   "text": "penghantar.",
+   "start": 22.06,
+   "end": 22.78,
+   "prob": 0.928
+  },
+  {
+   "text": "Gelombang",
+   "start": 23.34,
+   "end": 23.66,
+   "prob": 0.758
+  },
+  {
+   "text": "sinyal",
+   "start": 23.66,
+   "end": 24.08,
+   "prob": 0.965
+  },
+  {
+   "text": "yang",
+   "start": 24.08,
+   "end": 24.22,
+   "prob": 0.993
+  },
+  {
+   "text": "menabrak",
+   "start": 24.22,
+   "end": 24.62,
+   "prob": 0.97
+  },
+  {
+   "text": "dindingnya",
+   "start": 24.62,
+   "end": 25.26,
+   "prob": 0.985
+  },
+  {
+   "text": "menggeser",
+   "start": 25.26,
+   "end": 25.98,
+   "prob": 0.889
+  },
+  {
+   "text": "muatan",
+   "start": 25.98,
+   "end": 26.3,
+   "prob": 0.976
+  },
+  {
+   "text": "listrik",
+   "start": 26.3,
+   "end": 26.72,
+   "prob": 0.968
+  },
+  {
+   "text": "di",
+   "start": 26.72,
+   "end": 26.86,
+   "prob": 0.979
+  },
+  {
+   "text": "logam,",
+   "start": 26.86,
+   "end": 27.32,
+   "prob": 0.992
+  },
+  {
+   "text": "dan",
+   "start": 27.32,
+   "end": 27.88,
+   "prob": 0.372
+  },
+  {
+   "text": "itu",
+   "start": 27.88,
+   "end": 28.3,
+   "prob": 0.967
+  },
+  {
+   "text": "melemahkan",
+   "start": 28.3,
+   "end": 28.92,
+   "prob": 0.907
+  },
+  {
+   "text": "gelombang",
+   "start": 28.92,
+   "end": 29.4,
+   "prob": 0.753
+  },
+  {
+   "text": "di",
+   "start": 29.4,
+   "end": 29.56,
+   "prob": 0.769
+  },
+  {
+   "text": "dalam",
+   "start": 29.56,
+   "end": 29.76,
+   "prob": 0.985
+  },
+  {
+   "text": "kotak.",
+   "start": 29.76,
+   "end": 30.22,
+   "prob": 0.995
+  },
+  {
+   "text": "Namanya",
+   "start": 30.52,
+   "end": 31.12,
+   "prob": 0.973
+  },
+  {
+   "text": "Effek",
+   "start": 31.12,
+   "end": 31.58,
+   "prob": 0.507
+  },
+  {
+   "text": "Sankar",
+   "start": 31.58,
+   "end": 32.04,
+   "prob": 0.774
+  },
+  {
+   "text": "Faraday.",
+   "start": 32.04,
+   "end": 32.76,
+   "prob": 0.868
+  },
+  {
+   "text": "Dia",
+   "start": 32.96,
+   "end": 33.32,
+   "prob": 0.914
+  },
+  {
+   "text": "nggak",
+   "start": 33.32,
+   "end": 33.5,
+   "prob": 0.391
+  },
+  {
+   "text": "nahan",
+   "start": 33.5,
+   "end": 33.82,
+   "prob": 0.882
+  },
+  {
+   "text": "sinyal",
+   "start": 33.82,
+   "end": 34.16,
+   "prob": 0.916
+  },
+  {
+   "text": "dengan",
+   "start": 34.16,
+   "end": 34.36,
+   "prob": 0.993
+  },
+  {
+   "text": "sempurna,",
+   "start": 34.36,
+   "end": 34.96,
+   "prob": 0.989
+  },
+  {
+   "text": "tapi",
+   "start": 35.36,
+   "end": 35.6,
+   "prob": 0.988
+  },
+  {
+   "text": "cukup",
+   "start": 35.6,
+   "end": 36.04,
+   "prob": 0.997
+  },
+  {
+   "text": "bikin",
+   "start": 36.04,
+   "end": 36.3,
+   "prob": 0.996
+  },
+  {
+   "text": "sinyal",
+   "start": 36.3,
+   "end": 36.68,
+   "prob": 0.975
+  },
+  {
+   "text": "di",
+   "start": 36.68,
+   "end": 36.8,
+   "prob": 0.947
+  },
+  {
+   "text": "dalam",
+   "start": 36.8,
+   "end": 37.12,
+   "prob": 0.979
+  },
+  {
+   "text": "jauh",
+   "start": 37.12,
+   "end": 37.76,
+   "prob": 0.994
+  },
+  {
+   "text": "melemah.",
+   "start": 37.76,
+   "end": 38.26,
+   "prob": 0.956
+  },
+  {
+   "text": "Jadi",
+   "start": 38.62,
+   "end": 38.94,
+   "prob": 0.972
+  },
+  {
+   "text": "caranya,",
+   "start": 38.94,
+   "end": 39.42,
+   "prob": 0.976
+  },
+  {
+   "text": "bikin",
+   "start": 39.9,
+   "end": 40.22,
+   "prob": 0.996
+  },
+  {
+   "text": "sinyal",
+   "start": 40.22,
+   "end": 40.54,
+   "prob": 0.968
+  },
+  {
+   "text": "baru",
+   "start": 40.54,
+   "end": 40.84,
+   "prob": 0.992
+  },
+  {
+   "text": "di",
+   "start": 40.84,
+   "end": 41.06,
+   "prob": 0.963
+  },
+  {
+   "text": "dalam",
+   "start": 41.06,
+   "end": 41.28,
+   "prob": 0.996
+  },
+  {
+   "text": "kotaknya.",
+   "start": 41.28,
+   "end": 41.84,
+   "prob": 0.99
+  },
+  {
+   "text": "Antena",
+   "start": 42.3,
+   "end": 42.7,
+   "prob": 0.919
+  },
+  {
+   "text": "di",
+   "start": 42.7,
+   "end": 42.88,
+   "prob": 0.651
+  },
+  {
+   "text": "luar",
+   "start": 42.88,
+   "end": 43.18,
+   "prob": 0.999
+  },
+  {
+   "text": "menangkap",
+   "start": 43.18,
+   "end": 43.52,
+   "prob": 0.986
+  },
+  {
+   "text": "sinyal.",
+   "start": 43.52,
+   "end": 44.02,
+   "prob": 0.972
+  },
+  {
+   "text": "Kabelnya",
+   "start": 44.42,
+   "end": 44.82,
+   "prob": 0.841
+  },
+  {
+   "text": "masuk,",
+   "start": 44.82,
+   "end": 45.14,
+   "prob": 0.999
+  },
+  {
+   "text": "lalu",
+   "start": 45.7,
+   "end": 46.0,
+   "prob": 0.98
+  },
+  {
+   "text": "antena",
+   "start": 46.0,
+   "end": 46.42,
+   "prob": 0.603
+  },
+  {
+   "text": "kecil",
+   "start": 46.42,
+   "end": 46.76,
+   "prob": 0.999
+  },
+  {
+   "text": "di",
+   "start": 46.76,
+   "end": 46.9,
+   "prob": 0.934
+  },
+  {
+   "text": "dalam",
+   "start": 46.9,
+   "end": 47.22,
+   "prob": 0.995
+  },
+  {
+   "text": "yang",
+   "start": 47.22,
+   "end": 47.48,
+   "prob": 0.973
+  },
+  {
+   "text": "menyebarkannya.",
+   "start": 47.48,
+   "end": 48.22,
+   "prob": 0.815
+  },
+  {
+   "text": "Tapi",
+   "start": 48.6,
+   "end": 49.1,
+   "prob": 0.985
+  },
+  {
+   "text": "lift",
+   "start": 49.1,
+   "end": 49.44,
+   "prob": 0.149
+  },
+  {
+   "text": "itu",
+   "start": 49.44,
+   "end": 49.7,
+   "prob": 0.985
+  },
+  {
+   "text": "bergerak",
+   "start": 49.7,
+   "end": 50.12,
+   "prob": 0.997
+  },
+  {
+   "text": "naik",
+   "start": 50.12,
+   "end": 50.34,
+   "prob": 0.99
+  },
+  {
+   "text": "turun.",
+   "start": 50.34,
+   "end": 50.8,
+   "prob": 0.986
+  },
+  {
+   "text": "Jadi",
+   "start": 51.12,
+   "end": 51.54,
+   "prob": 0.936
+  },
+  {
+   "text": "antenanya",
+   "start": 51.54,
+   "end": 52.18,
+   "prob": 0.774
+  },
+  {
+   "text": "bisa",
+   "start": 52.18,
+   "end": 52.4,
+   "prob": 0.994
+  },
+  {
+   "text": "dipasang",
+   "start": 52.4,
+   "end": 52.94,
+   "prob": 0.975
+  },
+  {
+   "text": "di",
+   "start": 52.94,
+   "end": 53.08,
+   "prob": 0.972
+  },
+  {
+   "text": "poros",
+   "start": 53.08,
+   "end": 53.4,
+   "prob": 0.924
+  },
+  {
+   "text": "lift,",
+   "start": 53.4,
+   "end": 53.68,
+   "prob": 0.974
+  },
+  {
+   "text": "bukan",
+   "start": 53.96,
+   "end": 54.22,
+   "prob": 0.983
+  },
+  {
+   "text": "ikut",
+   "start": 54.22,
+   "end": 54.5,
+   "prob": 0.994
+  },
+  {
+   "text": "kabin.",
+   "start": 54.5,
+   "end": 54.92,
+   "prob": 0.928
+  },
+  {
+   "text": "Tapi",
+   "start": 55.3,
+   "end": 55.68,
+   "prob": 0.706
+  },
+  {
+   "text": "jujur",
+   "start": 55.68,
+   "end": 56.0,
+   "prob": 0.972
+  },
+  {
+   "text": "aja,",
+   "start": 56.0,
+   "end": 56.26,
+   "prob": 0.93
+  },
+  {
+   "text": "nggak",
+   "start": 56.72,
+   "end": 56.92,
+   "prob": 0.38
+  },
+  {
+   "text": "semua",
+   "start": 56.92,
+   "end": 57.24,
+   "prob": 0.999
+  },
+  {
+   "text": "lift",
+   "start": 57.24,
+   "end": 57.5,
+   "prob": 0.294
+  },
+  {
+   "text": "sinyalnya",
+   "start": 57.5,
+   "end": 58.06,
+   "prob": 0.931
+  },
+  {
+   "text": "langsung",
+   "start": 58.06,
+   "end": 58.34,
+   "prob": 0.996
+  },
+  {
+   "text": "mati.",
+   "start": 58.34,
+   "end": 58.84,
+   "prob": 0.99
+  },
+  {
+   "text": "Tergantung",
+   "start": 59.24,
+   "end": 59.62,
+   "prob": 0.986
+  },
+  {
+   "text": "bahan",
+   "start": 59.62,
+   "end": 60.1,
+   "prob": 0.993
+  },
+  {
+   "text": "dan",
+   "start": 60.1,
+   "end": 60.28,
+   "prob": 0.987
+  },
+  {
+   "text": "penguat",
+   "start": 60.28,
+   "end": 60.68,
+   "prob": 0.983
+  },
+  {
+   "text": "sinyal",
+   "start": 60.68,
+   "end": 61.08,
+   "prob": 0.945
+  },
+  {
+   "text": "di",
+   "start": 61.08,
+   "end": 61.22,
+   "prob": 0.973
+  },
+  {
+   "text": "gedungnya.",
+   "start": 61.22,
+   "end": 61.7,
+   "prob": 0.949
+  },
+  {
+   "text": "Jadi",
+   "start": 62.12,
+   "end": 62.5,
+   "prob": 0.947
+  },
+  {
+   "text": "kalau",
+   "start": 62.5,
+   "end": 62.9,
+   "prob": 0.651
+  },
+  {
+   "text": "lagi",
+   "start": 62.9,
+   "end": 63.14,
+   "prob": 0.994
+  },
+  {
+   "text": "penting,",
+   "start": 63.14,
+   "end": 63.66,
+   "prob": 0.999
+  },
+  {
+   "text": "selesaikan",
+   "start": 63.98,
+   "end": 64.48,
+   "prob": 0.963
+  },
+  {
+   "text": "telefonnya",
+   "start": 64.48,
+   "end": 65.14,
+   "prob": 0.586
+  },
+  {
+   "text": "sebelum",
+   "start": 65.14,
+   "end": 65.64,
+   "prob": 0.987
+  },
+  {
+   "text": "masuk",
+   "start": 65.64,
+   "end": 65.88,
+   "prob": 0.998
+  },
+  {
+   "text": "lift.",
+   "start": 65.88,
+   "end": 66.2,
+   "prob": 0.926
+  },
+  {
+   "text": "Atau",
+   "start": 66.54,
+   "end": 67.18,
+   "prob": 0.985
+  },
+  {
+   "text": "kasih",
+   "start": 67.18,
+   "end": 67.36,
+   "prob": 0.947
+  },
+  {
+   "text": "tahu",
+   "start": 67.36,
+   "end": 67.6,
+   "prob": 0.52
+  },
+  {
+   "text": "dulu",
+   "start": 67.6,
+   "end": 67.9,
+   "prob": 0.943
+  },
+  {
+   "text": "lawan",
+   "start": 67.9,
+   "end": 68.18,
+   "prob": 0.91
+  },
+  {
+   "text": "bicara",
+   "start": 68.18,
+   "end": 68.48,
+   "prob": 0.777
+  },
+  {
+   "text": "mu,",
+   "start": 68.48,
+   "end": 68.74,
+   "prob": 0.301
+  },
+  {
+   "text": "biar",
+   "start": 69.1,
+   "end": 69.3,
+   "prob": 0.994
+  },
+  {
+   "text": "nggak",
+   "start": 69.3,
+   "end": 69.42,
+   "prob": 0.963
+  },
+  {
+   "text": "dikira",
+   "start": 69.42,
+   "end": 69.72,
+   "prob": 0.783
+  },
+  {
+   "text": "ngilang.",
+   "start": 69.72,
+   "end": 70.24,
+   "prob": 0.879
+  },
+  {
+   "text": "Nah,",
+   "start": 70.82,
+   "end": 71.14,
+   "prob": 0.972
+  },
+  {
+   "text": "itu",
+   "start": 71.54,
+   "end": 71.72,
+   "prob": 0.978
+  },
+  {
+   "text": "jawabannya.",
+   "start": 71.72,
+   "end": 72.34,
+   "prob": 0.99
+  },
+  {
+   "text": "Sinyal",
+   "start": 72.86,
+   "end": 73.22,
+   "prob": 0.57
+  },
+  {
+   "text": "melemah",
+   "start": 73.22,
+   "end": 73.74,
+   "prob": 0.882
+  },
+  {
+   "text": "karena",
+   "start": 73.74,
+   "end": 74.04,
+   "prob": 0.965
+  },
+  {
+   "text": "kotak",
+   "start": 74.04,
+   "end": 74.52,
+   "prob": 0.97
+  },
+  {
+   "text": "logam",
+   "start": 74.52,
+   "end": 74.84,
+   "prob": 0.84
+  },
+  {
+   "text": "lift",
+   "start": 74.84,
+   "end": 75.14,
+   "prob": 0.952
+  },
+  {
+   "text": "bekerja",
+   "start": 75.14,
+   "end": 75.76,
+   "prob": 0.995
+  },
+  {
+   "text": "seperti",
+   "start": 75.76,
+   "end": 76.02,
+   "prob": 0.993
+  },
+  {
+   "text": "Sankar",
+   "start": 76.02,
+   "end": 76.58,
+   "prob": 0.658
+  },
+  {
+   "text": "Faraday.",
+   "start": 76.58,
+   "end": 77.12,
+   "prob": 0.862
+  },
+  {
+   "text": "Pertanyaan",
+   "start": 77.46,
+   "end": 77.98,
+   "prob": 0.976
+  },
+  {
+   "text": "berikutnya",
+   "start": 77.98,
+   "end": 78.5,
+   "prob": 0.997
+  },
+  {
+   "text": "kamu",
+   "start": 78.5,
+   "end": 79.02,
+   "prob": 0.552
+  },
+  {
+   "text": "yang",
+   "start": 79.02,
+   "end": 79.18,
+   "prob": 0.999
+  },
+  {
+   "text": "pilih.",
+   "start": 79.18,
+   "end": 79.68,
+   "prob": 0.991
+  },
+  {
+   "text": "Tulis",
+   "start": 79.9,
+   "end": 80.16,
+   "prob": 0.984
+  },
+  {
+   "text": "di",
+   "start": 80.16,
+   "end": 80.28,
+   "prob": 0.981
+  },
+  {
+   "text": "komentar,",
+   "start": 80.28,
+   "end": 80.66,
+   "prob": 0.985
+  },
+  {
+   "text": "nanti",
+   "start": 81.06,
+   "end": 81.48,
+   "prob": 0.981
+  },
+  {
+   "text": "Noel",
+   "start": 81.48,
+   "end": 81.98,
+   "prob": 0.447
+  },
+  {
+   "text": "menjawab.",
+   "start": 81.98,
+   "end": 82.48,
+   "prob": 0.987
+  }
+ ]
+}

@@ -1,13 +1,5 @@
-export type SceneType =
-  | "hook"
-  | "loan"
-  | "installment"
-  | "balance"
-  | "overpay"
-  | "effective"
-  | "nuance"
-  | "tips"
-  | "cta";
+// Scene type names come from each video's sceneTypeMap (hook and cta have special text handling)
+export type SceneType = string;
 
 export type TextSegment = { text: string; highlight: boolean };
 

@@ -11,6 +11,8 @@ export type SceneCtx = {
 
 export type Transition = "whip" | "cut" | "flyby";
 
+export type ActionVol = { c: V3; r: number } | { box: [V3, V3] };
+
 export type SceneDef = {
   id: string;
   mood: MoodName;
@@ -18,6 +20,8 @@ export type SceneDef = {
   shadowSize?: number;
   camera: (ctx: SceneCtx) => CamShot;
   Set: React.FC<{ ctx: SceneCtx }>;
+  // Main action as world-space spheres or boxes at a frame; subtitles are placed so they never cover these
+  action?: (ctx: SceneCtx) => ActionVol[];
   // How this scene hands over to the next one
   out?: Transition;
   whipDir?: 1 | -1;

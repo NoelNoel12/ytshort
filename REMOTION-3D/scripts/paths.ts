@@ -61,3 +61,10 @@ export const opt = (name: string): string | undefined => {
   const i = process.argv.indexOf(`--${name}`);
   return i >= 0 ? process.argv[i + 1] : undefined;
 };
+
+// Float samples of an audio file at a low rate (offsets, levels, SFX presence)
+export const pcm = (file: string, rate = 8000): Float32Array => {
+  const r = spawnSync("ffmpeg", ["-v", "error", "-i", file, "-ac", "1", "-ar", String(rate), "-f", "f32le", "-"], { maxBuffer: 1 << 28 });
+  if (r.status !== 0) throw new Error(`ffmpeg could not decode ${file}`);
+  return new Float32Array(new Uint8Array(r.stdout as Buffer).buffer);
+};

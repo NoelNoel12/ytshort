@@ -11,7 +11,7 @@ import type { SceneDef } from "../scenes/types";
 import type { Timeline } from "../types";
 import type { SfxCue } from "../sfx/types";
 
-export type ShortProps = { hideText?: boolean; lockCamera?: number | null; freezeAt?: number | null; perf?: PerfFlags; dpr?: number; muteSfx?: boolean };
+export type ShortProps = { hideText?: boolean; lockCamera?: number | null; freezeAt?: number | null; perf?: PerfFlags; dpr?: number; muteSfx?: boolean; muteAudio?: boolean; audioOnly?: boolean };
 
 type Config = {
   tl: Timeline;
@@ -24,20 +24,30 @@ type Config = {
   captionBottoms?: number[];
 };
 
-export const ShortVideo: React.FC<ShortProps & Config> = ({ tl, scenes, endCardAt, textStyle = "chips", sfx = [], world, captionBottoms, hideText = false, lockCamera = null, freezeAt = null, perf = {}, dpr = 1, muteSfx = false }) => {
+export const ShortVideo: React.FC<ShortProps & Config> = ({ tl, scenes, endCardAt, textStyle = "chips", sfx = [], world, captionBottoms, hideText = false, lockCamera = null, freezeAt = null, perf = {}, dpr = 1, muteSfx = false, muteAudio = false, audioOnly = false }) => {
   const frame = useCurrentFrame();
-  const { width, height } = useVideoConfig();
-  const { def } = activeScene(scenes, frame, tl);
-  const whip = Math.abs(whipAmount(scenes, frame, tl));
   return (
     <AbsoluteFill style={{ backgroundColor: "#cfe8f6" }}>
-      <Audio src={staticFile(tl.audio)} />
-      {!muteSfx &&
+      {!muteAudio && <Audio src={staticFile(tl.audio)} />}
+      {!muteAudio &&
+        !muteSfx &&
         sfx.map((c, k) => (
           <Sequence key={k} from={c.at} durationInFrames={c.durationInFrames} layout="none" name={`sfx ${c.name}`}>
             <Audio src={staticFile(`sfx/${c.name}.wav`)} volume={c.volume} />
           </Sequence>
         ))}
+      {/* Audio-only renders (sound design checks) skip the picture entirely */}
+      {!audioOnly && <Picture tl={tl} scenes={scenes} frame={frame} endCardAt={endCardAt} textStyle={textStyle} world={world} captionBottoms={captionBottoms} hideText={hideText} lockCamera={lockCamera} freezeAt={freezeAt} perf={perf} dpr={dpr} />}
+    </AbsoluteFill>
+  );
+};
+
+const Picture: React.FC<Omit<Config, "sfx"> & ShortProps & { frame: number }> = ({ tl, scenes, frame, endCardAt, textStyle = "chips", world, captionBottoms, hideText = false, lockCamera = null, freezeAt = null, perf = {}, dpr = 1 }) => {
+  const { width, height } = useVideoConfig();
+  const { def } = activeScene(scenes, frame, tl);
+  const whip = Math.abs(whipAmount(scenes, frame, tl));
+  return (
+    <>
       <svg width="0" height="0" style={{ position: "absolute" }}>
         <filter id="whipblur" x="-10%" y="-10%" width="120%" height="120%">
           <feGaussianBlur stdDeviation={`${(whip * 34).toFixed(2)} ${(whip * 3).toFixed(2)}`} />
@@ -59,6 +69,6 @@ export const ShortVideo: React.FC<ShortProps & Config> = ({ tl, scenes, endCardA
           <EndCard frame={frame} at={endCardAt} />
         </>
       )}
-    </AbsoluteFill>
+    </>
   );
 };

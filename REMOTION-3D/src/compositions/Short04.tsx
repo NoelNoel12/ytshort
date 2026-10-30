@@ -4,6 +4,11 @@ import { SCENES_04, SFX_04 } from "../scenes/short04";
 import { TL, cue } from "../scenes/short04/tl";
 import { Kampung } from "../world/Kampung";
 import { placeCaptions, type Overlay } from "../lib/captionPlacement";
+import mix04 from "../../data/short-04.sfxmix.json";
+
+// Per cue gains from scripts/mixSfx.ts keep every effect under the voice-over
+const GAIN = new Map(mix04.map((m) => [m.key, m.gain]));
+const SFX_MIXED = SFX_04.map((c) => ({ ...c, volume: c.volume * (GAIN.get(`${c.name}@${c.at}`) ?? 1) }));
 
 // Title card (S1) and end card areas, so subtitles keep clear of them
 export const TEXT_OVERLAYS: Overlay = (f) => [
@@ -15,5 +20,5 @@ export const TEXT_OVERLAYS: Overlay = (f) => [
 // Short 04 follows the newer rules: clean text (no boxes), subtitles clear of the action, sound effects
 export const Short04: React.FC<ShortProps> = (props) => {
   const placement = useMemo(() => placeCaptions(TL, SCENES_04, 1, TEXT_OVERLAYS), []);
-  return <ShortVideo {...props} tl={TL} scenes={SCENES_04} endCardAt={cue("S9", 2)} textStyle="clean" sfx={SFX_04} world={<Kampung variant="short04" />} captionBottoms={placement.bottoms} />;
+  return <ShortVideo {...props} tl={TL} scenes={SCENES_04} endCardAt={cue("S9", 2)} textStyle="clean" sfx={SFX_MIXED} world={<Kampung variant="short04" />} captionBottoms={placement.bottoms} />;
 };

@@ -3,6 +3,8 @@
 //   tsx scripts/verifySync.ts short-02                  (pre-render: pages vs silencedetect, triggers)
 //   tsx scripts/verifySync.ts short-02 --video out.mp4  (also post-render: ffprobe + re-transcription)
 //   add --stills to render 10 mid-word stills into out/sync-stills for a visual check
+// With sound effects in the mix the VO offset is measured by cross-correlation against the VO file,
+// pause snapping uses the VO's own pauses, and every SFX cue is checked for being audible.
 import fs from "node:fs";
 import path from "node:path";
 import { getVideo } from "../data/videos";
@@ -10,8 +12,15 @@ import { CAPTION_RULES } from "../src/theme";
 import { tokenize } from "../src/lib/text";
 import type { ScriptData, Timeline } from "../src/types";
 import { alignScriptToWhisper, snapToSilences, stats, type WhisperWord } from "./lib/align";
-import { OUT, PROJECT, arg, dataFile, detectSilences, flag, opt, readJson, run, writeJson } from "./paths";
+import { OUT, PROJECT, arg, dataFile, detectSilences, flag, opt, pcm, readJson, run, writeJson } from "./paths";
 import { transcribe } from "./transcribe";
+
+const SR = 8000;
+const db = (x: number) => (20 * Math.log10(Math.max(1e-9, x))).toFixed(1);
+type Cue = { at: number; name: string; volume: number; durationInFrames?: number };
+const SFX: Record<string, () => Promise<Cue[]>> = {
+  "short-04": async () => (await import("../src/scenes/short04/index")).SFX_04,
+};
 
 const id = arg(0, "short-02")!;
 const cfg = getVideo(id);
@@ -108,13 +117,57 @@ if (video) {
   console.log(`  start_time both 0: ${startOk ? "yes" : "NO"}, duration diff ${ms(durDiff)} ms (limit 50)`);
   const tmp = path.join(OUT, `${id}.postrender.wav`);
   run("ffmpeg", ["-v", "error", "-y", "-i", video, "-vn", "-ac", "1", "-ar", "48000", "-c:a", "pcm_s16le", tmp]);
+  // VO offset inside the mix: best lag of the VO file against the rendered audio (within 50 ms)
+  const mix = pcm(tmp);
+  const vo = pcm(path.join(PROJECT, "public", cfg.publicAudio));
+  let bestLag = 0;
+  let bestC = -Infinity;
+  for (let lag = -SR / 20; lag <= SR / 20; lag++) {
+    let c = 0;
+    for (let n = Math.max(0, lag); n < Math.min(mix.length, vo.length + lag); n++) c += mix[n] * vo[n - lag];
+    if (c > bestC) [bestC, bestLag] = [c, lag];
+  }
+  let vv = 0;
+  for (let n = 0; n < vo.length; n++) vv += vo[n] * vo[n];
+  const gain = bestC / vv;
+  const offset = bestLag / SR;
+  const offsetOk = Math.abs(offset) <= 0.01;
+  console.log(`  VO offset in the mix ${ms(offset)} ms (limit 10), VO gain ${gain.toFixed(3)}: ${offsetOk ? "ok" : "NO"}`);
+  let peak = 0;
+  for (const x of mix) peak = Math.max(peak, Math.abs(x));
+  console.log(`  mix peak ${db(peak)} dBFS (clips at 0)`);
+  // Sound effects: what is left after removing the VO, at each cue versus the quiet floor
+  const cues = SFX[id] ? await SFX[id]() : [];
+  let sfxOk = true;
+  if (cues.length) {
+    const res = new Float32Array(mix.length);
+    for (let n = 0; n < mix.length; n++) res[n] = mix[n] - gain * (vo[n - bestLag] ?? 0);
+    const rms = (a: number, b: number) => {
+      let s = 0;
+      let k = 0;
+      for (let n = Math.max(0, Math.round(a * SR)); n < Math.min(res.length, Math.round(b * SR)); n++, k++) s += res[n] * res[n];
+      return Math.sqrt(s / Math.max(1, k));
+    };
+    const busy = (t: number) => cues.some((c) => t >= c.at / fps - 0.05 && t <= c.at / fps + Math.max(1.2, (c.durationInFrames ?? 0) / fps));
+    const quiet: number[] = [];
+    for (let t = 0; t < mix.length / SR - 0.1; t += 0.1) if (!busy(t)) quiet.push(rms(t, t + 0.1));
+    quiet.sort((a, b) => a - b);
+    const floor = quiet.length ? quiet[Math.floor(quiet.length / 2)] : 1e-6;
+    const levels = cues.map((c) => ({ c, l: rms(c.at / fps, c.at / fps + 0.25) }));
+    const heard = levels.filter((x) => x.l >= floor * 4); // 12 dB over the floor
+    console.log(`  SFX: ${cues.length} cues, ${heard.length} audible (12 dB over the residual floor ${db(floor)} dBFS), loudest ${db(Math.max(...levels.map((x) => x.l)))} dBFS RMS`);
+    for (const x of levels.filter((x) => x.l < floor * 4)) console.log(`    quiet cue ${x.c.name} at frame ${x.c.at}: ${db(x.l)} dBFS`);
+    sfxOk = heard.length === cues.length;
+  }
   const tjson = path.join(OUT, `${id}.postrender.whisper.json`);
   const sec = transcribe(tmp, tjson);
   const ww = readJson<{ words: WhisperWord[] }>(tjson).words;
   const script = readJson<ScriptData>(dataFile(id, "script"));
   const sw = script.scenes.flatMap((s) => tokenize(s.vo));
   const raw = alignScriptToWhisper(sw, ww);
-  const snapped = snapToSilences(raw, detectSilences(tmp), 0.25).words;
+  // With SFX in the pauses silencedetect on the mix is unreliable, so snap to the VO's own pauses
+  const pauses = cues.length ? tl.silences.map((s) => ({ start: s.start + offset, end: s.end + offset })) : detectSilences(tmp);
+  const snapped = snapToSilences(raw, pauses, 0.25).words;
   const diffsRaw = raw.map((w, i) => Math.abs(w.start - tl.words[i].start));
   const diffs = snapped.map((w, i) => Math.abs(w.start - tl.words[i].start));
   const capStart = tl.words.map((w) => {
@@ -129,10 +182,10 @@ if (video) {
   console.log(`  |word start diff| raw whisper:         median ${ms(sR.median)} ms, p95 ${ms(sR.p95)} ms, max ${ms(sR.max)} ms`);
   console.log(`  |word start diff| whisper + snapping:  median ${ms(sS.median)} ms, p95 ${ms(sS.p95)} ms, max ${ms(sS.max)} ms`);
   console.log(`  |word start diff| vs on-screen frame:  median ${ms(sV.median)} ms, p95 ${ms(sV.p95)} ms, max ${ms(sV.max)} ms`);
-  const p2 = startOk && durDiff <= 0.05 && sS.median < 0.08 && sS.p95 < 0.2 && sV.median < 0.08 && sV.p95 < 0.2;
-  console.log(`  RESULT ${p2 ? "PASS" : "FAIL"} (median < 80 ms, p95 < 200 ms, start 0, duration within 50 ms)`);
+  const p2 = startOk && offsetOk && sfxOk && durDiff <= 0.05 && sS.median < 0.08 && sS.p95 < 0.2 && sV.median < 0.08 && sV.p95 < 0.2;
+  console.log(`  RESULT ${p2 ? "PASS" : "FAIL"} (median < 80 ms, p95 < 200 ms, start 0, duration within 50 ms, VO offset within 10 ms, every SFX audible)`);
   failed ||= !p2;
-  writeJson(path.join(OUT, `${id}.postrender.sync.json`), { probe, stats: { raw: sR, snapped: sS, shown: sV } });
+  writeJson(path.join(OUT, `${id}.postrender.sync.json`), { probe, offsetSec: offset, voGain: gain, peak, stats: { raw: sR, snapped: sS, shown: sV } });
 }
 
 // ---------- 3. stills at mid-word frames ----------

@@ -15,6 +15,15 @@
     "render:preview": "remotion render Short02 out/preview-short-02.mp4 --scale=0.5 --concurrency=3 --jpeg-quality=80 --crf=26",
     "render:one": "tsx scripts/renderAll.ts short-02",
     "render:all": "tsx scripts/renderAll.ts --all",
+    "data:04": "tsx scripts/data.ts short-04",
+    "make:sfx": "tsx scripts/makeSfx.ts",
+    "mix:sfx:04": "tsx scripts/mixSfx.ts short-04",
+    "check:text:04": "tsx scripts/checkTextOverlap.ts short-04",
+    "verify:04": "tsx scripts/checkFinance.ts short-04 && tsx scripts/checkTextOverlap.ts short-04 && tsx scripts/verifySync.ts short-04",
+    "check:flicker:04": "tsx scripts/checkFlicker.ts short-04 --mode static && tsx scripts/checkFlicker.ts short-04 --mode moving",
+    "still:check:04": "tsx scripts/stills.ts Short04 all-scenes --sheet",
+    "render:mix:04": "tsx scripts/renderAll.ts short-04 --audio-only",
+    "render:one:04": "tsx scripts/renderAll.ts short-04",
     "typecheck": "tsc --noEmit -p ."
   },
   "dependencies": {

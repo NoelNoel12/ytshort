@@ -46,5 +46,8 @@ for (const page of tl.pages) {
   }
 }
 for (const r of rows) console.log(r);
+const bands = new Map<number, number>();
+for (const b of placement.bottoms) bands.set(b, (bands.get(b) ?? 0) + 1);
+console.log(`  pages per band (bottom edge): ${[...bands].sort((a, b) => b[0] - a[0]).map(([b, n]) => `${b} x ${n}`).join(", ")}`);
 console.log(`checkTextOverlap ${id}: ${tl.pages.length} pages, ${moved} moved off the default band, ${bad} still touching the action or other text`);
 process.exit(bad ? 1 : 0);

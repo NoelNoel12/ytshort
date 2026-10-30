@@ -4,6 +4,7 @@ import { captionRect, placeCaptions, projectVolume } from "../src/lib/captionPla
 import { SCENES_04 } from "../src/scenes/short04/index";
 import { TL } from "../src/scenes/short04/tl";
 import { TEXT_OVERLAYS } from "../src/compositions/Short04";
+import { theme } from "../src/theme";
 
 const placement = placeCaptions(TL, SCENES_04, 1, TEXT_OVERLAYS);
 for (const page of TL.pages) {
@@ -12,7 +13,7 @@ for (const page of TL.pages) {
   const s = TL.scenes[si];
   const parts: string[] = [];
   let anyHit = false;
-  for (const b of [0.715, 0.81]) {
+  for (const b of [theme.caption.bottomPct, theme.caption.altBottoms[0]]) {
     const rect = captionRect(page, b);
     let need = -1;
     let head = 1;

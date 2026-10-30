@@ -43,7 +43,7 @@ const windowFor = (sid: string): [number, number] => {
 
 const serveUrl = await bundle({ entryPoint: path.join(PROJECT, "src", "index.ts") });
 const MODE = (opt("mode") ?? (process.argv.includes("--moving") ? "moving" : "static")) as "static" | "moving" | "actors";
-const composition = await selectComposition({ serveUrl, id: cfg.compositionId, inputProps: { hideText: true, lockCamera: null, freezeAt: null }, browserExecutable, chromiumOptions });
+const composition = await selectComposition({ serveUrl, id: cfg.compositionId, inputProps: { hideText: true, lockCamera: null, freezeAt: null, muteAudio: true }, browserExecutable, chromiumOptions });
 const W = Math.round(composition.width * scale);
 const H = Math.round(composition.height * scale);
 const root = path.join(OUT, `flicker-${MODE}`);
@@ -56,7 +56,8 @@ for (const sc of tl.scenes) {
   const [a, b] = windowFor(sc.id);
   const dir = path.join(root, sc.id);
   fs.mkdirSync(dir, { recursive: true });
-  const inputProps = { hideText: true, lockCamera: MODE === "moving" ? null : a, freezeAt: MODE === "actors" ? null : a };
+  // Pictures only: no audio extraction while grabbing frames
+  const inputProps = { hideText: true, lockCamera: MODE === "moving" ? null : a, freezeAt: MODE === "actors" ? null : a, muteAudio: true };
   await renderFrames({
     composition: { ...composition, props: inputProps },
     serveUrl,

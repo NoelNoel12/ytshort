@@ -20,7 +20,11 @@ ROOT/
     src/world/                             sky, ground, buildings, nature, street, materials
     src/world/characters/                  Pak Dodi, Tuti, poses and expressions
     src/world/props/                       desk, boards, money, jar, scale, mixer, bubbles
-    src/scenes/short02/                    S1 to S9
+    src/scenes/short02/                    S1 to S9 (Short 02)
+    src/scenes/short04/                    S1 to S9 (Short 04), layout, ring streams, per-scene framing
+    src/world/short04/                     cutaway building, lift cabin, tower, antennas, signal props
+    src/lib/captionPlacement.ts            subtitle band per page, clear of each scene's action volumes
+    public/sfx/                            procedural sound effects (scripts/makeSfx.ts)
     src/components/TextLayers.tsx          subtitles, labels, title card, end card
     tools/transcribe.py                    faster-whisper word timestamps
 ```
@@ -56,6 +60,17 @@ Browser and GL: `remotion.config.ts` uses the container Chrome on Linux. On Wind
 | `npm run render:preview` | half-resolution preview to `out/` |
 | `npm run render:one` | final MP4 to FINAL OUTPUT, then verifySync on the file |
 | `npm run render:all` | every video in `data/videos.ts` |
+
+Short 04 has the same set with a `:04` suffix (`data:04`, `verify:04`, `check:flicker:04`, `still:check:04`, `render:one:04`) plus:
+
+| Command | What it does |
+|---|---|
+| `npm run make:sfx` | builds the procedural sound effects into `public/sfx/` |
+| `npm run mix:sfx:04` | per cue SFX gains so effects stay under the VO (`data/short-04.sfxmix.json`) |
+| `npm run check:text:04` | every subtitle page against every action volume and text overlay, every frame |
+| `npm run render:mix:04` | VO plus SFX mix only (`out/short-04.mix.wav`, about 30 s) |
+
+Rules used from Short 04 on: subtitles never cover the main action (each scene declares its action as spheres or boxes, `captionPlacement` picks a band, `scripts/fitFraming.ts` finds a dolly-back and lens shift where needed), no background boxes behind title or subtitles (outline and shadow only), sound effects on every action.
 
 Post-render check on any file: `npx tsx scripts/verifySync.ts short-02 --video "path.mp4"` (add `--stills` for 10 mid-word stills).
 

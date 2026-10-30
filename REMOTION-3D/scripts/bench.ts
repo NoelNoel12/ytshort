@@ -14,7 +14,7 @@ const perf = Object.fromEntries((opt("perf") ?? "").split(",").filter(Boolean).m
 const browserExecutable = "/opt/pw-browsers/chromium_headless_shell-1243/chrome-headless-shell-linux64/chrome-headless-shell";
 const chromiumOptions = { gl: (process.env.REMOTION_GL ?? "swangle") as "swangle" };
 const serveUrl = await bundle({ entryPoint: path.join(PROJECT, "src", "index.ts") });
-const inputProps = { hideText: false, lockCamera: null, perf, dpr: Number(opt("dpr") ?? 1) };
+const inputProps = { hideText: false, lockCamera: null, perf, dpr: Number(opt("dpr") ?? 1), muteAudio: true };
 const composition = await selectComposition({ serveUrl, id: opt("comp") ?? "Short02", inputProps, browserExecutable, chromiumOptions });
 const dir = path.join(OUT, "bench");
 fs.rmSync(dir, { recursive: true, force: true });
